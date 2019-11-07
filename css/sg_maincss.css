@@ -1,0 +1,544 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    font-family: "Neuzeit-Grotesk", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    background-color: #FDBB87;
+    text-align: center;
+    color: white;
+    padding-top: 60px;
+}
+
+main {
+    margin: 0 100px;
+    text-align: center;
+}
+
+.element {
+    padding-bottom: 2rem;
+    border-top-width: 0.15rem;
+    border-top-style: double;
+    border-top-color: #FDBB87;
+}
+
+header>p {
+    line-height: 5em;
+    /*Give space between <h1> and <p>*/
+}
+
+header>img {
+    text-align: center;
+}
+
+section {
+    margin: 30px auto;
+}
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #CD9F7B;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h4 {
+    margin-bottom: 0.25rem;
+}
+
+section>h3, section>h4 {
+    line-height: 3em;
+}
+
+figcaption{
+    margin: .5em;
+    font-size: 12px;
+}
+
+
+/* header nav*/
+
+#top_nav {
+    display: block;
+    margin: 60% auto;
+    background-color: #CD9F7B;
+}
+
+#top_nav a {
+    font-size: 14px;
+    line-height: 2rem;
+    text-decoration: none;
+    padding: 1em 2em;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    transition: color .5s linear, font-weight 1s, font-size .5s;
+}
+
+#top_nav a:hover, #top_nav a:focus {
+    font-weight: bold;
+    color: #FDBB87;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+code {
+    background-color: #EEE;
+    color: black;
+    width: 60%;
+    padding: 0.5rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* nav icon animation */
+
+
+/* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
+.box {
+    margin: 0;
+    position:absolute;
+    top:0;
+    right:0;
+    z-index:100;
+    overflow:hidden;
+}
+
+#menu {
+    width: 100px;
+    height: 100px;
+    transform:scale(.3);
+}
+
+#menu:before, #menu:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 16px;
+    background: #000;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+#menu:before {
+    top: 5px;
+    box-shadow: 0 37px #000;
+}
+
+#menu:after {
+    bottom: 5px;
+}
+
+#menu:hover:before {
+    top: 42px;
+    box-shadow: none;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+#menu:hover:after {
+    bottom: 42px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#side_nav{
+    height:100%;
+    position:fixed;
+    top:0;
+    right:-300px;
+    background-color: #fff;
+    opacity:0;
+    transition:right .5s, opcity .5s;
+}
+
+
+
+/* 
+    INTERACTIVE ELEMENTS -------------------
+  */
+
+/*Styling text input field with label*/
+
+.textElement input[type=text] {
+    width: 30%;
+    border: 2px solid #EFEFEF;
+    display: block;
+}
+
+/* Styling for radio button*/
+
+input[type=radio] {
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    -webkit-appearance: inherit;
+    border: 1px solid #aaa;
+    position: relative;
+    box-sizing: border-box;
+}
+
+input[type=radio]:hover {
+    border: 1px solid #1abc9c;
+    background: #eee;
+}
+
+input[type=radio]:active, input[type=radio]:focus {
+    border: 1px solid #ccc;
+    background: #1abc9c;
+}
+
+/*Styling paragraph*/
+
+.para p {
+    width: 60%;
+    line-height: 2rem;
+    margin: 0 auto;
+    text-align: justify;
+}
+
+/* Styling Numbered Lists  */
+
+ol {
+    padding-left: 1em;
+    margin: 0 auto;
+    width: 30%;
+}
+
+.element ul {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.element ul>li>p {
+    text-align: justify;
+    line-height: 1.5rem;
+    padding: 1rem;
+}
+
+/*Style the <input> and <label> using Building Forms (Shay Howe) (Links to an external site.) as a guide. Add HTML as necessary to allow further control of the styling, and make sure:
+  The label and text input look visually related.
+  The text input shows us when it has been interacted with, both on hover and focus.*/
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px auto;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: background-color 1s, color 1s;
+}
+
+input[type=text]:hover, input[type=text]:focus {
+    background-color: #1abc9c;
+    color: #fff;
+}
+
+select {
+    width: 6em;
+}
+
+/* button{
+    padding:5px;
+  }
+    
+  button:hover, button:focus{
+    color:white;
+    background-color:green;
+    border:2px solid black;
+  }
+   */
+
+/* 
+    TEXT ELEMENTS -------------------
+  */
+
+#intext {
+    color: white;
+    transition: font-size 0.5s, font-weight 0.5s;
+}
+
+#intext:hover, #intext:focus {
+    font-size: 20px;
+    color: #FDBB87;
+    font-weight: bold;
+}
+
+/* image as a link.*/
+
+.image {
+    margin-top:1rem;
+    width: 300px;
+    height: auto;
+    opacity:0;
+    transition: margin-top 1s, opacity 1s;
+}
+
+.image:hover, .image:focus {
+    margin-top:0.5rem;
+    opacity: 1;
+
+}
+
+/* 
+    COMBINED ELEMENTS -------------------
+  */
+
+/*main nav item*/
+
+.main_nav {
+    display: flex;
+    min-width: 27em;
+    max-width: 60%;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.main_nav a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    padding: 1em 2em;
+    display: inline-block;
+    transition: font-size 0.5s, font-weight 0.5s;
+}
+
+.main_nav a:hover, .main_nav a:focus {
+    font-weight: bold;
+    color: #FDBB87;
+    font-size: 20px;
+    text-decoration: none;
+}
+ /*Styling product image*/
+.proj{
+    position: relative;
+    display:flex;
+    width:70%;
+}
+
+.projects{
+    flex:1;
+    margin:0 auto;
+    position: relative;
+}
+
+.projects div:nth-child(2){
+    width:300px;
+    height:168.75px;
+    text-align: center;
+    margin:1rem auto;
+    padding-top:2.5rem;
+}
+
+.projects div:nth-child(2) h4{
+    border-bottom:2px solid #fff;
+    width:40%;
+    margin:0 auto;
+    text-align: center;
+    line-height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.projects div:nth-child(1){
+    position: absolute;
+    width:300px;
+    height:168.75px;
+    top:0;
+    left:3px;
+}
+
+
+/* .productImage {
+   
+    display: inline-block;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 5%;
+}
+
+.productImage img {
+    width: 225px;
+    height: auto;
+    opacity: 0.95;
+    -moz-box-shadow: 0 0 40px #ccc;
+    -webkit-box-shadow: 0 0 40px #ccc;
+    box-shadow: 0 0 40px #ccc;
+}
+
+.productImage a {
+    font-size: 0.9rem;
+    color: grey;
+    text-decoration: underline;
+}
+
+.productImage a:hover, .productImage a:focus {
+    color: blue;
+    text-decoration: none;
+} */
+
+/* style whole page button*/
+
+.btn1 {
+    letter-spacing: .1em;
+    font-size: .9em;
+    text-transform: capitalize;
+    background: none;
+    font-weight: 600;
+    color: #F9F3E8;
+    border-radius: 10%;
+    background-color: gray;
+    padding: .4em 1.5em;
+    transition: background-color 0.25s;
+    text-decoration: none;
+}
+
+.btn1:hover, .btn2:focus {
+    text-decoration: none;
+    background-color: #FDBB87;
+    color: black;
+}
+
+/* button{
+    padding:.5rem 2rem;
+    
+    border:none;
+    background-color:#FF877F;
+    color:#444442;
+    font-weight:bold;
+    box-shadow: 5px 5px 5px #7D7D7D;
+  }
+  
+  button:hover, button:focus{
+    color:#FF877F;
+    background-color: #444442;
+  } */
+
+#citations ul {
+    font-size: .88em;
+    min-width: 27em;
+    max-width: 80%;
+    margin: 0 auto;
+    list-style-type: none;
+}
+
+/*footer*/
+
+footer {
+    background-color: #FDBB87;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    line-height: 2em;
+}
+
+#up i {
+    /*Return top button located on the bottom-right of the screen*/
+    font-size: 2.5rem;
+    position: fixed;
+    top: 92%;
+    left: 95.5%;
+    opacity: .6;
+    color: grey;
+}
+
+#up i:hover, #up i:focus {
+    opacity: 1;
+    color: #FDBB87;
+}
+
+/*Responsive*/
+
+@media screen and (max-width:50em) {
+    /*For mobile and small tablet screen*/
+    body {
+        min-width: 30em;
+        /*Minimum width for mobile screen*/
+        max-width: 100%;
+    }
+    main {
+        margin: 0 25px;
+    }
+    header>p {
+        font-size: 1.2rem;
+        /*Give space between <h1> and <p>*/
+    }
+    /* header nav*/
+    #top_nav {
+        display: block;
+        text-align: center;
+    }
+    #top_nav a {
+        width: 100%;
+        display: block;
+    }
+    code {
+        width: 100%;
+        line-height: 2em;
+        margin-bottom: 1em;
+    }
+    /* 
+      INTERACTIVE ELEMENTS -------------------
+    */
+    /*Styling text input field with label*/
+    .textElement input[type=text] {
+        width: 60%;
+    }
+    /* Styling for radio button*/
+    input[type=radio] {
+        width: 1.2rem;
+        height: 1.2rem;
+    }
+    /*Styling paragraph*/
+    .para p {
+        width: 100%;
+    }
+    /* 
+      TEXT ELEMENTS -------------------
+    */
+    #image {
+        width: 100%;
+    }
+    /* 
+      COMBINED ELEMENTS -------------------
+    */
+    /*main nav item*/
+    .main_nav {
+        min-width: 27em;
+        max-width: 80%;
+    }
+    .productImage img {
+        width: 300px;
+    }
+    #up i {
+        font-size: 2.5rem;
+        position: fixed;
+        top: 93%;
+        left: 90%;
+    }
+}

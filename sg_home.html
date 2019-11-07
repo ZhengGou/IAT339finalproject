@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/icon" href="img/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>HWY Portfolio Style Guide</title>
+
+    <link href="css/sg_maincss.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <header class="header" id="topOfThePage">
+        <img src="img/logo.png" alt="" width="100" />
+        <h1>Portfolio Style Guide</h1>
+
+        <p>This page will help you know more about my portfolio.</p>
+
+
+
+
+        <!-- animation nav icon -->
+        <div class="box">
+            <div id="menu" onclick="toggleNav()"></div>
+        </div>
+        <div id="side_nav">
+            <nav id="top_nav">
+                <a href="#interactive_elements">Interactive Elements</a>
+                <a href="#text_elements">Text Elements</a>
+                <a href="#combined_elements">Combined Elements</a>
+                <a href="p_home.html">Web Template</a>
+                <a href="#citations">Citations</a>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <!-- INTERACTIVE ELEMENTS SECTION // -->
+        <section id="interactive_elements">
+            <h2>Interactive Elements</h2>
+
+            <!--in-text link-->
+            <section class="element">
+                <h3>In-text link</h3>
+                <h4>Sample code:</h4>
+                <code>&lt;p&gt; &lt;a href ="sg_home.html" id ="intext"&gt; Wenyue He &lt;/a&gt;is a junior designer and creator.&lt;/p&gt;</code>
+                <h4>Rendered element:</h4>
+
+                <p><a href="sg_home.html" id="intext">Wenyue He</a> is a junior designer and creator. </p>
+
+            </section>
+
+            <!--Navigation link-->
+            <section class="element">
+                <h3>Navigation link</h3>
+                <h4>Sample code:</h4>
+                <code>&lt;nav class="main_nav"&gt;&nbsp;<br>&lt;a href ="sg_home.html"&gt; Nav1 &lt;/a&gt;<br>&nbsp;&lt;/nav&gt;</code>
+                <h4>Rendered element:</h4>
+                <nav class="main_nav">
+                    <div class="nav_item"></div><a href="sg_home.html">Nav1</a>
+                </nav>
+
+            </section>
+
+
+
+
+            <!--Submit button-->
+            <section class="element">
+                <h3>Submit Buttons</h3>
+
+                <h4>Sample code:</h4>
+                <code>&lt;button type="submit"&gt;Submit&lt;/button&gt;</code>
+                <h4>Rendered element: </h4>
+                <a href="sg_home.html" class="btn1">submit</a>
+
+            </section>
+
+            <!--A text input field and a label-->
+            <section class="element textElement">
+                <h3>Text Input Field with Label</h3>
+                <h4>Sample code:</h4>
+                <code>&lt;label for="demo-input"&gt;Enter your name:&lt;/label&gt;</code>
+                <code>&lt;input id="demo-input" type="text" placeholder="Margaret"&gt;</code>
+                <h4>Rendered element: </h4>
+                <label for="demo-input">Enter your name:</label>
+                <input id="demo-input" type="text" placeholder="Margaret">
+            </section>
+
+            <!--Radio Button with Label-->
+            <section class="element radioElement">
+                <h3>Radio Button with Label</h3>
+
+                <h4>Sample code:</h4>
+                <code>&lt;label for="radioB"&gt;Change color:&lt;/label&gt;</code>
+                <code>&lt;input type="radio" id="radioB" value="radioB"&gt;</code>
+                <code>&lt;label for="radioB"&gt;red&lt;/label&gt;</code>
+
+                <h4>Rendered element: </h4>
+                <label for="radioB">Change color:</label>
+                <input type="radio" id="radioB" value="radioB">
+                <label for="radioB">red</label>
+            </section>
+
+            <!--3.An image as a link-->
+            <section class="element">
+                <h3>Image as a Link</h3>
+                <h4>Sample code:</h4>
+                <code>&lt;a href="sg_home.html"&gt; &lt;img class="image" src= "img/Munchkin.jpg" alt="313 home page design"&gt; &lt;/a&gt;</code>
+                <h4>Rendered element: </h4>
+                <a href="sg_home.html"><img class="image" src="img/313homepage.jpg" alt="313 home page design"></a>
+            </section>
+
+
+        </section>
+        <!-- // INTERACTIVE ELEMENTS SECTION -->
+
+
+
+        <!-- TEXT ELEMENTS SECTION // -->
+        <section id="text_elements">
+            <h2>Text Elements</h2>
+            <!--4.Four levels of heading-->
+            <section class="element">
+                <h3>Headings</h3>
+
+                <h4>Sample code:</h4>
+
+                <code>&lt;h2&gt;This is h2.&lt;/h2&gt;</code>
+                <code>&lt;h3&gt;This is h3.&lt;/h3&gt;</code>
+                <code>&lt;h4&gt;This is h4.&lt;/h4&gt;</code>
+                <code>&lt;h5&gt;This is h5.&lt;/h5&gt;</code>
+
+                <h4>Rendered element:</h4>
+                <div>
+                    <h2>This is h2.</h2>
+                    <h3>This is h3.</h3>
+                    <h4>This is h4.</h4>
+                    <h5>This is h5.</h5>
+                </div>
+
+            </section>
+
+            <!--5.A paragraph-->
+            <section class="element para">
+                <h3>Paragraphs</h3>
+                <h4>Sample code:</h4>
+                <code>&lt;p&gt;I born in Guangzhou, China. I major in interactive arts & tech at Simon Fraser University.
+                        I‘m a junior designer and creator. I
+                        am interesting in UX/UI design and programming which are able
+                        to create and design games, websites and phone applications.
+                        I have lots of experience in using Adobe software. I always improve
+                        my design skills and communication skills in class and club activities. Also,
+                        I work as a freelance professional photographer who specialized in product and portrait
+                        photography in my free time. Within these years of experiences, I learned to be more productive,
+                        creative, and adaptable in academic and working environments.
+                    &lt;/p&gt; </code>
+                <h4>Rendered element:</h4>
+                <p>I born in Guangzhou, China. I major in interactive arts & tech at Simon Fraser University.
+                    I‘m a junior designer and creator. I
+                    am interesting in UX/UI design and programming which are able
+                    to create and design games, websites and phone applications.
+                    I have lots of experience in using Adobe software. I always improve
+                    my design skills and communication skills in class and club activities. Also,
+                    I work as a freelance professional photographer who specialized in product and portrait
+                    photography in my free time. Within these years of experiences, I learned to be more productive,
+                    creative, and adaptable in academic and working environments.
+                </p>
+            </section>
+
+            <!--Number lists-->
+            <section class="element">
+                <h3>Numbered Lists</h3>
+
+                <h4>Sample code:</h4>
+
+                <code>&lt;ol&gt; <br>
+        &nbsp;  &lt;li&gt;First item&lt;/li&gt; <br>
+         &nbsp; &lt;li&gt;Second item&lt;/li&gt; <br>
+         &lt;/ol&gt;</code>
+
+                <h4>Rendered element:</h4>
+                <ol>
+                    <li>First item</li>
+                    <li>Second item</li>
+                </ol>
+            </section>
+
+        </section>
+        <!-- // TEXT ELEMENTS SECTION -->
+
+
+
+        <!-- COMBINED ELEMENTS SECTION // -->
+        <section id="combined_elements">
+            <h2>Combined Elements</h2>
+            <!--main navigation-->
+            <section class="element">
+                <h3>Main Navigation</h3>
+
+                <h4>Sample code:</h4>
+                <code>&lt;nav&gt; <br>
+        &nbsp;  &lt;a href="sg_home.html"&gt;Home&lt;/a&gt; <br>
+        &nbsp;  &lt;a href="product_listing.html"&gt;Product&lt;/a&gt; <br>
+        &nbsp;  &lt;a href="sg_home.html"&gt;Profile&lt;/a&gt; <br>
+        &nbsp;  &lt;a href="sg_home.html"&gt;About&lt;/a&gt; <br>
+       
+         &lt;/nav&gt;</code>
+
+                <h4>Rendered element:</h4>
+
+                <nav class="main_nav">
+                    <a href="sg_home.html">Home</a>
+                    <a href="product_listing.html">Projects</a>
+                    <a href="sg_home.html">Profile</a>
+                    <a href="sg_home.html">About</a>
+                </nav>
+
+            </section>
+
+            <!--Product Listing-->
+            <section class="element">
+                <h3>Product Listing</h3>
+
+                <h4>Sample code:</h4>
+                <code>
+          &lt;section&gt;<br>
+          &nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&lt;figure&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;img src="img/Munchkin.jpg" alt=""&gt;<br>
+            &nbsp;&nbsp;&lt;/figure&gt;<br>
+            &nbsp;&nbsp;&lt;h4&gt;Munchkin&lt;/h4&gt;<br>
+            &nbsp;&nbsp;&lt;a href="sg_home.html"&gt; Detailed description&lt;/a&gt;<br>
+          &nbsp;&lt;/div&gt;<br>
+          &nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&lt;figure&gt;<br>
+              &nbsp;&nbsp;&nbsp;&lt;img src="img/BritshShorthair.jpg" alt=""&gt;<br>
+            &nbsp;&nbsp;&lt;/figure&gt;<br>
+           &nbsp;&nbsp;&nbsp; &lt;h4&gt;BritshShorthair&lt;/h4&gt;<br>
+           &nbsp;&nbsp; &lt;a href="sg_home.html"&gt; Detailed description&lt;/a&gt;<br>
+          &nbsp;&lt;/div&gt;<br>
+          &nbsp;&lt;div&gt;<br>
+            &nbsp;&nbsp;&lt;figure&gt;<br>
+             &nbsp;&nbsp;&nbsp; &lt;img src="img/ragdoll.jpg" alt=""&gt;<br>
+            &nbsp;&nbsp;&lt;/figure&gt;<br>
+            &nbsp;&nbsp;&lt;h4&gt;Ragdoll&lt;/h4&gt;<br>
+           &nbsp;&nbsp; &lt;a href="sg_home.html"&gt; Detailed description&lt;/a&gt;<br>
+         &nbsp; &lt;/div&gt;<br>
+        &lt;/section&gt;<br>
+      </code>
+
+                <h4>Rendered element:</h4>
+
+                <section class="proj">
+                    <div class="projects">
+                        <div>
+                            <a href="sg_home.html"><img class="image" src="img/313homepage.jpg"
+                                    alt="313 home page design">
+                            </a>
+                        </div>
+                        <div>
+                            <h4>The maid</h4>
+                            <p>IAT339</p>
+                        </div>
+                    </div>
+                    <div class="projects">
+                        <div>
+                            <a href="sg_home.html"><img class="image" src="img/313homepage.jpg"
+                                    alt="313 home page design">
+                            </a>
+                        </div>
+                        <div>
+                            <h4>The maid</h4>
+                            <p>IAT339</p>
+                        </div>
+                    </div>
+                    <div class="projects">
+                        <div>
+                            <a href="sg_home.html"><img class="image" src="img/313homepage.jpg"
+                                    alt="313 home page design">
+                            </a>
+                        </div>
+                        <div>
+                            <h4>The maid</h4>
+                            <p>IAT339</p>
+                        </div>
+                    </div>
+                    <!-- <div class="productImage">
+                        <figure>
+                            <img src="img/BritishShorthair.jpg" alt="">
+                        </figure>
+                        <h4>Britsh Shorthair</h4>
+                        <a href="sg_home.html"> Detailed description</a>
+                    </div>
+                    <div class="productImage">
+                        <figure>
+                            <img src="img/ragdoll.jpg" alt="">
+                        </figure>
+                        <h4>Ragdoll</h4>
+                        <a href="sg_home.html"> Detailed description</a>
+                    </div> -->
+                </section>
+
+            </section>
+
+        </section>
+        <!-- // COMBINED ELEMENTS SECTION -->
+
+
+
+
+        <!--3. assemble brand components -->
+        <section class="element">
+            <h2>Branding components </h2>
+            <ul>
+                <!--font-->
+                <li>
+                    <h3>Font</h3>
+                    
+                    <figure>
+                        <img src="img/bodyfont.png" alt="" width="600">
+                        <figcaption>Main font: Neuzeit Grotesk</figcaption>
+                    </figure>
+
+                </li>
+                <!--Colour palettes-->
+                <li>
+                    <h3>Colour palettes</h3>
+                    <img src="img/color.png" alt="" width="600">
+                </li>
+                <!--Potential imagery-->
+                <li>
+                    <h3>Potential imagery</h3>
+                    <img src="img/wlogo.png" alt="" width="200">
+                </li>
+
+                <li>
+                    <h3>Intro</h3>
+                    <p>I borned in Guangzhou, China. I'm major in interactive arts & tech at Simon Fraser University.
+                        I‘m a junior designer and creator. I
+                        am interesting in UX/UI design and programming which are able
+                        to create and design games, websites and phone applications.
+                        I have lots of experience in using Adobe software. I always improve
+                        my design skills and communication skills in class and club activities. Also,
+                        I work as a freelance professional photographer who specialized in product and portrait
+                        photography in my free time. Within these years of experiences, I learned to be more productive,
+                        creative, and adaptable in academic and working environments.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <div id="up">
+            <a href="#topOfThePage"><i class="fa fa-arrow-circle-up"></i></a>
+        </div>
+    </main>
+
+
+
+
+
+    <footer>
+        <section id="citations">
+            <h2>Citations</h2>
+
+            <ul>
+
+                <li>Images were all create by myself.</li>
+
+                <li>URW Studio.Designer.<strong>Franklin Gothic Medium[font]</strong>. Retrieved from <a
+                        href="https://www.fonts.com/font/urw/franklin-gothic/medium ">https://www.fonts.com/font/urw/franklin-gothic/medium</a>.
+                </li>
+                <li>Łukasz Dziedzic.Designer.<strong>Lato[font]</strong>. Retrieved from <a
+                        href="https://fonts.google.com/specimen/Lato ">https://fonts.google.com/specimen/Lato</a>.
+                </li>
+            </ul>
+
+        </section>
+        <p>Copyright © 2019 by Wenyue He </p>
+    </footer>
+
+
+    <script src="js/nav.js"></script>
+</body>
+
+
+</html>

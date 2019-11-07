@@ -1,0 +1,309 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: black;
+    font-family: "Neuzeit-Grotesk", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: white;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+header {
+    padding-top: 50px;
+}
+
+main {
+    position: relative;
+    
+    text-align: center;
+}
+
+/* top logo */
+
+#logo {
+    position: fixed;
+    left: 0;
+    margin: 1.5rem 5rem;
+    z-index: 100;
+}
+
+#logo a img {
+    width: 50px;
+    height: 50px;
+}
+
+/* section {
+    margin: 30px auto;
+} */
+
+h2 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+    color: #CD9F7B;
+}
+
+h3 {
+    margin-top: 1rem;
+}
+
+h4 {
+    margin-bottom: 0.25rem;
+}
+
+section>h3, section>h4 {
+    line-height: 3em;
+}
+p{
+    color:white;
+}
+/* header nav*/
+
+#top_nav {
+    display: block;
+   
+    margin-top:15rem;
+}
+
+#top_nav a {
+    
+    font-size: 14px;
+    line-height: 2rem;
+    text-decoration: none;
+    padding: 1em 2em;
+    display: block;
+    background-color: #fff;
+    color: #000;
+    text-align: center;
+    transition: color .5s linear, font-weight 1s, font-size .5s;
+}
+
+#top_nav a:hover, #top_nav a:focus {
+    font-weight: bold;
+    color: #FDBB87;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+
+/* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
+.container {
+    /* margin-top:50px; */
+    position:fixed;
+    top:60px;
+    right:50px;
+    z-index:100;
+   
+    overflow:hidden;
+}
+
+#menu {
+    width: 100px;
+    height: 100px;
+    transform:scale(.3);
+}
+
+#menu:before, #menu:after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 16px;
+    background: #999;
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    -webkit-transition: all 0.15s ease-in-out;
+    transition: all 0.15s ease-in-out;
+}
+
+#menu:before {
+    top: 5px;
+    box-shadow: 0 37px #999;
+}
+
+#menu:after {
+    bottom: 5px;
+}
+
+#menu:hover:before {
+    top: 42px;
+    box-shadow: none;
+    -webkit-transform: rotate(225deg);
+    transform: rotate(225deg);
+}
+
+#menu:hover:after {
+    bottom: 42px;
+    -webkit-transform: rotate(135deg);
+    transform: rotate(135deg);
+}
+
+#side_nav{
+    height:100%;
+    position:fixed;
+    top:0;
+    right:-300px;
+    background-color: #fff;
+    opacity:0;
+    transition:right .5s, opcity .5s;
+}
+
+
+/* Styling Home page */
+
+.bigTitle {
+    width: 80%;
+   
+    padding: 2rem 0;
+    margin: 10rem auto 20rem auto;
+    text-align: left;
+}
+
+.bigTitle>h1 {
+    
+    font-size: 6rem;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+    text-transform: capitalize;
+    letter-spacing: .33rem;
+    color:#FDBB87;
+}
+.bigTitle>p {
+    font-size: 1.4rem;
+    padding: 2rem 0.5rem;
+    margin: 0;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: .11rem;
+}
+
+
+/* .home313{
+    width:400px;
+    height: auto;
+    margin-left:8rem;
+}
+ */
+
+/*About section*/
+
+#about {
+    width: 100%;
+    margin: 0;
+    padding:0;
+    color: #efe8d8;
+    display: flex;
+}
+
+#about .subtitle,
+#process .subtitle {
+    flex: 1;
+}
+
+#about .box {
+    flex: 2;
+    padding: 10rem 1rem;
+    display: block;
+    text-align: center;
+}
+
+#about .empty,
+#process .empty {
+    flex: 1;
+} 
+
+ #about .box p {
+    padding: 2rem;
+    margin:3.5rem auto;
+    text-align: justify;
+    line-height: 1.55rem;
+}
+
+.upright {
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    text-transform: capitalize;
+    padding-top: 180px;
+    padding-left: .5rem;
+    font-weight: 100;
+    font-size: 2rem;
+}
+
+
+/* project1 */
+
+
+#process {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+    display: flex;
+}
+
+#process .box {
+    flex: 3;
+    margin: 1rem;
+    padding: 0;
+    text-align: center;
+    float: left;
+}
+
+#process .box .flexing img {
+    width: 400px;
+    height: 400px;
+    padding: 1rem;
+    border: 2px solid #fff;
+    margin: .5rem;
+}
+
+#process .box p {
+    margin: .5rem;
+    padding: 1rem;
+    width: 400px;
+    height: auto;
+    display: inline-block;
+    text-align: justify;
+    line-height: 1.55rem;
+}
+
+#process h3 {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.75rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    top: 2rem;
+}
+
+#process .flexing {
+    padding-top: 2rem;
+    display: block;
+}
+
+.posSpacing {
+    padding-bottom: 3rem;
+    margin: 6rem auto 1rem auto;
+    border-bottom: 1.1px solid #383838;
+}
+
+.pos2 {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    top: 2rem;
+    z-index:-1;
+}
+
