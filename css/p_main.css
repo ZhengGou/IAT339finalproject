@@ -16,25 +16,30 @@ body {
     width: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
+    /* cursor:none; */
 }
 
 header {
-    padding-top: 50px;
+    
+    padding-top: 1px;
 }
 
 main {
     position: relative;
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
 }
+
 /* top logo */
 
 #logo {
     position: fixed;
     left: 0;
-    margin: 1.5rem 5rem;
+    margin: 5rem 6rem;
+   
     z-index: 100;
 }
 
@@ -42,8 +47,6 @@ a{
     width: 50px;
     height: 50px;
 }
-
-
 
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -73,7 +76,47 @@ p {
 #top_nav {
     display: block;
     margin-top: 15rem;
+    /* position: absolute;
+    left: 0;
+    margin: 3rem 6rem; */
 }
+/* .hover-this{
+    transition: all 0.3s ease;
+}
+#top_nav a span{
+    display: inline-block;
+    pointer-events: none;
+    transition: transform 0.1s linear;
+}
+.cursor{
+    pointer-events: none;
+    position: fixed;
+    padding:0.3rem;
+    border-radius: 50%;
+    background-color: #fff;
+    mix-blend-mode: difference;
+    transition: transform 0.3s ease;
+}
+.hover-this:hover~.cursor{
+    transform:translate(-50%,-50%)scale(8);
+}
+@media(min-width:900px){
+    .top_nav{
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media(max-width:900px){
+    .top_nav{
+        top:30%;
+        
+    }
+    .hover-this{
+        width:100%;
+        padding: 20px 0;
+        display: inline-block;
+    }
+} */
 
 #top_nav a {
     font-size: 14px;
@@ -81,13 +124,12 @@ p {
     text-decoration: none;
     padding: 1em 2em;
     display: block;
-    background-color: #fff;
     color: #000;
     text-align: center;
     transition: color .5s linear, font-weight 1s, font-size .5s;
-}
+} 
 
-#top_nav a:hover, #top_nav a:focus {
+ #top_nav a:hover, #top_nav a:focus {
     font-weight: bold;
     color: #FDBB87;
     font-size: 20px;
@@ -96,27 +138,12 @@ p {
 
 /*  styling footer  */
 
-
-/* footer icon */
-footer{
+footer {
     text-align: center;
     padding-top: 2rem;
     line-height: 2em;
-    border: 3px solid red;
 }
 
-.fab {
-    font-size: 17px;
-    color: #69524B;
-    letter-spacing: .5em;
-}
-
-.fab:active, .fab:hover, .fab:focus {
-    color: #902e3f;
-}
-footer h5{
-    color: #F6EDDE;
-}
 .footer-nav a {
     text-decoration: none;
     color: #F6EDDE;
@@ -127,10 +154,27 @@ footer h5{
     color: #FDBB87;
 }
 
+/* footer icon */
+
+.fab {
+    font-size: 17px;
+    color: #69524B;
+    letter-spacing: .5em;
+}
+
+.fab:active, .fab:hover, .fab:focus {
+    color: #FDBB87;
+}
+
+footer h5 {
+    color: #F6EDDE;
+}
+
 /* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
 
+
 .container {
-    /* margin-top:50px; */
+  
     position: fixed;
     top: 60px;
     right: 50px;
@@ -177,9 +221,9 @@ footer h5{
     bottom: 42px;
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
-}
+} 
 
-#side_nav {
+ #side_nav {
     height: 100%;
     position: fixed;
     top: 0;
@@ -206,60 +250,67 @@ footer h5{
 .bubble {
     position: absolute;
     bottom: 0;
-   
     background: #f1f1f1;
     border-radius: 50%;
     opacity: 0.5;
     animation: flying 10s infinite ease-in;
 }
-.bubble:nth-child(1){
+
+.bubble:nth-child(1) {
     width: 40px;
-   height: 40px;
-   left:10%;
-   animation-duration: 8s ;
+    height: 40px;
+    left: 10%;
+    animation-duration: 8s;
 }
-.bubble:nth-child(2){
-     width: 20px;
+
+.bubble:nth-child(2) {
+    width: 20px;
     height: 20px;
-    left:20%;
-    animation-duration: 10s ;
+    left: 20%;
+    animation-duration: 10s;
     animation-delay: 1s;
 }
-.bubble:nth-child(3){
+
+.bubble:nth-child(3) {
     width: 50px;
-   height: 50px;
-   left:35%;
-   animation-duration: 10s ;
-   animation-delay: 2s;
+    height: 50px;
+    left: 35%;
+    animation-duration: 10s;
+    animation-delay: 2s;
 }
-.bubble:nth-child(4){
+
+.bubble:nth-child(4) {
     width: 80px;
-   height: 80px;
-   left:50%;
-   animation-duration: 7s ;
-   animation-delay: 1s;
+    height: 80px;
+    left: 50%;
+    animation-duration: 7s;
+    animation-delay: 1s;
 }
-.bubble:nth-child(5){
+
+.bubble:nth-child(5) {
     width: 35px;
-   height: 35px;
-   left:55%;
-   animation-duration: 6s ;
-   animation-delay: 2s;
+    height: 35px;
+    left: 55%;
+    animation-duration: 6s;
+    animation-delay: 2s;
 }
-.bubble:nth-child(6){
+
+.bubble:nth-child(6) {
     width: 45px;
-   height: 45px;
-   left:65%;
-   animation-duration: 8s ;
-   animation-delay: 3s;
+    height: 45px;
+    left: 65%;
+    animation-duration: 8s;
+    animation-delay: 3s;
 }
-.bubble:nth-child(7){
+
+.bubble:nth-child(7) {
     width: 25px;
-   height: 25px;
-   left:75%;
-   animation-duration: 7s ;
-   animation-delay: 2s;
+    height: 25px;
+    left: 75%;
+    animation-duration: 7s;
+    animation-delay: 2s;
 }
+
 @keyframes flying {
     0% {
         bottom: -100px;
@@ -350,57 +401,10 @@ footer h5{
 
  */
 
-.myimg {
-    position: relative;
-    margin: 1rem 2rem;
-    padding: 0;
-}
-
-.myimg div:nth-child(1) {
-    position: relative;
-    background-image: url("../img/me.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-    width: 12rem;
-    height: 12rem;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.myimg div:nth-child(2) {
-    position: absolute;
-    background-image: url("../img/c1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    width: 8rem;
-    height: 8rem;
-    margin: 0 auto;
-    top: -20px;
-    left: -50px;
-}
-
-.myimg div:nth-child(3) {
-    position: absolute;
-    background-image: url("../img/c2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-    width: 6rem;
-    height: 6rem;
-    margin: 0 auto;
-    top: 120px;
-    left: 120px;
-}
-
 .bigTitle {
     width: 68%;
     padding: 2rem 0;
-    margin: 10rem auto 0rem auto;
+    margin: 10rem auto 15rem auto;
     text-align: left;
     display: flex;
 }
@@ -429,16 +433,9 @@ footer h5{
     margin: 1rem;
 }
 
-/* .home313{
-    width:400px;
-    height: auto;
-    margin-left:8rem;
-}
- */
-
 /*About section*/
 
-#about {
+#about, #project {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -446,23 +443,86 @@ footer h5{
     display: flex;
 }
 
-#about .subtitle, #process .subtitle {
+#about .subtitle, #process .subtitle, #project .subtitle {
     flex: 1;
 }
 
 #about .box {
     flex: 2;
-    padding: 10rem 1rem;
+    padding: 10rem 2rem 10rem 4rem;
     display: block;
+    text-align: justify;
+}
+
+#project .box{
+    flex: 7;
+    margin: 3rem 10rem 10rem 0;
+    padding: 0;
+    text-align: center;
+    display: block;
+}
+
+.myimg {
+    position: relative;
+    margin: 10rem 2rem;
+    padding: 0;
+}
+
+.myimg div:nth-child(1) {
+    position: relative;
+    background-image: url("../img/me.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    width: 12rem;
+    height: 12rem;
+    margin: 7rem auto 0 auto;
     text-align: center;
 }
 
-#about .empty, #process .empty {
+.myimg div:nth-child(2) {
+    position: absolute;
+    background-image: url("../img/c1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 8rem;
+    height: 8rem;
+    margin: 7rem auto 0 auto;
+    top: -20px;
+    left: -50px;
+}
+
+.myimg div:nth-child(3) {
+    position: absolute;
+    background-image: url("../img/c2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    margin: 7rem auto 0 auto;
+    top: 120px;
+    left: 120px;
+}
+
+#about .empty, #process .empty #project .empty{
     flex: 1;
 }
 
-#about .box p {
+#about .box p{
     padding: 2rem;
+    margin: 3.5rem auto;
+    text-align: justify;
+    line-height: 1.55rem;
+}
+
+#project .box p {
+    width:60%;
+    padding: 0;
     margin: 3.5rem auto;
     text-align: justify;
     line-height: 1.55rem;
@@ -472,7 +532,7 @@ footer h5{
     writing-mode: vertical-lr;
     text-orientation: upright;
     text-transform: capitalize;
-    padding-top: 180px;
+    padding-top: 100px;
     padding-left: .5rem;
     font-weight: 100;
     font-size: 2rem;
@@ -489,19 +549,25 @@ footer h5{
 }
 
 #process .box {
-    flex: 3;
-    margin: 1rem;
+    flex: 7;
+    margin: 3rem 10rem 1rem 0;
     padding: 0;
     text-align: center;
-    float: left;
 }
 
 #process .box .flexing img {
     width: 400px;
-    height: 400px;
+    height: auto;
     padding: 1rem;
     border: 2px solid #fff;
-    margin: .5rem;
+    margin: .5rem auto;
+    display:block;
+    text-align: center;
+}
+
+#process .box .flexing p{
+    text-align: justify;
+    width:60%;
 }
 
 #process .box p {
@@ -532,7 +598,6 @@ footer h5{
 .posSpacing {
     padding-bottom: 3rem;
     margin: 6rem auto 1rem auto;
-    border-bottom: 1.1px solid #383838;
 }
 
 .pos2 {
