@@ -26,7 +26,9 @@ main {
     position: relative;
     text-align: center;
 }
-
+a{
+    text-decoration: none;
+}
 /* top logo */
 
 #logo {
@@ -41,9 +43,7 @@ main {
     height: 50px;
 }
 
-/* section {
-    margin: 30px auto;
-} */
+
 
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
