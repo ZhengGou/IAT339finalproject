@@ -94,6 +94,39 @@ p {
     text-decoration: none;
 }
 
+/*  styling footer  */
+
+
+/* footer icon */
+footer{
+    text-align: center;
+    padding-top: 2rem;
+    line-height: 2em;
+    border: 3px solid red;
+}
+
+.fab {
+    font-size: 17px;
+    color: #69524B;
+    letter-spacing: .5em;
+}
+
+.fab:active, .fab:hover, .fab:focus {
+    color: #902e3f;
+}
+footer h5{
+    color: #F6EDDE;
+}
+.footer-nav a {
+    text-decoration: none;
+    color: #F6EDDE;
+    padding: .5em;
+}
+
+.footer-nav a:active, .footer-nav a:hover, .footer-nav a:focus {
+    color: #FDBB87;
+}
+
 /* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
 
 .container {
@@ -367,7 +400,7 @@ p {
 .bigTitle {
     width: 68%;
     padding: 2rem 0;
-    margin: 10rem auto 20rem auto;
+    margin: 10rem auto 0rem auto;
     text-align: left;
     display: flex;
 }
