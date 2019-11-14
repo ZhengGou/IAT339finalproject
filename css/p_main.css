@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    background: black;
+    background: #222222;
     font-family: "Neuzeit-Grotesk", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: white;
@@ -24,7 +24,6 @@ header {
 
 main {
     position: relative;
-    
     text-align: center;
 }
 
@@ -64,19 +63,19 @@ h4 {
 section>h3, section>h4 {
     line-height: 3em;
 }
-p{
-    color:white;
+
+p {
+    color: white;
 }
+
 /* header nav*/
 
 #top_nav {
     display: block;
-   
-    margin-top:15rem;
+    margin-top: 15rem;
 }
 
 #top_nav a {
-    
     font-size: 14px;
     line-height: 2rem;
     text-decoration: none;
@@ -95,22 +94,21 @@ p{
     text-decoration: none;
 }
 
-
 /* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
+
 .container {
     /* margin-top:50px; */
-    position:fixed;
-    top:60px;
-    right:50px;
-    z-index:100;
-   
-    overflow:hidden;
+    position: fixed;
+    top: 60px;
+    right: 50px;
+    z-index: 100;
+    overflow: hidden;
 }
 
 #menu {
     width: 100px;
     height: 100px;
-    transform:scale(.3);
+    transform: scale(.3);
 }
 
 #menu:before, #menu:after {
@@ -148,39 +146,244 @@ p{
     transform: rotate(135deg);
 }
 
-#side_nav{
-    height:100%;
-    position:fixed;
-    top:0;
-    right:-300px;
+#side_nav {
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
     background-color: #fff;
-    opacity:0;
-    transition:right .5s, opcity .5s;
+    opacity: 0;
+    transition: right .5s, opcity .5s;
 }
-
 
 /* Styling Home page */
 
-.bigTitle {
-    width: 80%;
+/* home bg */
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+
+.bubble {
+    position: absolute;
+    bottom: 0;
    
+    background: #f1f1f1;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: flying 10s infinite ease-in;
+}
+.bubble:nth-child(1){
+    width: 40px;
+   height: 40px;
+   left:10%;
+   animation-duration: 8s ;
+}
+.bubble:nth-child(2){
+     width: 20px;
+    height: 20px;
+    left:20%;
+    animation-duration: 10s ;
+    animation-delay: 1s;
+}
+.bubble:nth-child(3){
+    width: 50px;
+   height: 50px;
+   left:35%;
+   animation-duration: 10s ;
+   animation-delay: 2s;
+}
+.bubble:nth-child(4){
+    width: 80px;
+   height: 80px;
+   left:50%;
+   animation-duration: 7s ;
+   animation-delay: 1s;
+}
+.bubble:nth-child(5){
+    width: 35px;
+   height: 35px;
+   left:55%;
+   animation-duration: 6s ;
+   animation-delay: 2s;
+}
+.bubble:nth-child(6){
+    width: 45px;
+   height: 45px;
+   left:65%;
+   animation-duration: 8s ;
+   animation-delay: 3s;
+}
+.bubble:nth-child(7){
+    width: 25px;
+   height: 25px;
+   left:75%;
+   animation-duration: 7s ;
+   animation-delay: 2s;
+}
+@keyframes flying {
+    0% {
+        bottom: -100px;
+        transform: translateX(100px);
+    }
+    50% {
+        transform: translateX(100px);
+    }
+    100% {
+        bottom: 1080px;
+        transform: translateX(-200px);
+    }
+}
+
+/* .bghome{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    opacity: 0.2;
+}
+.bghome .rotate{
+    position:absolute;
+    top:calc(50%-200px);
+    left:calc(50%-200px);
+    width:400px;
+    height:400px;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+    zoom:4;
+}
+@keyframes rotate{
+    0%{
+        transform:rotateX(0deg) rotateY(0deg);
+    }
+    100%{
+        transform:rotateX(360deg) rotateY(360deg);
+    }
+}
+.bghome .rotate .sphere{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+.bghome .rotate .sphere:nth-child(2){
+    transform:rotate(90deg);
+}
+.bghome .rotate .sphere:nth-child(3){
+    transform:rotate(45deg);
+}
+.bghome .rotate .sphere:nth-child(4){
+    transform:rotate(-45deg);
+}
+.bghome .rotate .sphere span{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    background:radial-gradient(#ccc,#fff);
+    border-radius: 50%;
+}
+
+.bghome .rotate .sphere span:nth-child(1){
+    transform:rotateY(0deg);
+}
+
+.bghome .rotate .sphere span:nth-child(2){
+    transform:rotateY(30deg);
+}
+.bghome .rotate .sphere span:nth-child(3){
+    transform:rotateY(60deg);
+}
+.bghome .rotate .sphere span:nth-child(4){
+    transform:rotateY(90deg);
+}
+.bghome .rotate .sphere span:nth-child(5){
+    transform:rotateY(120deg);
+}
+.bghome .rotate .sphere span:nth-child(6){
+    transform:rotateY(150deg);
+}
+
+ */
+
+.myimg {
+    position: relative;
+    margin: 1rem 2rem;
+    padding: 0;
+}
+
+.myimg div:nth-child(1) {
+    position: relative;
+    background-image: url("../img/me.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    width: 12rem;
+    height: 12rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.myimg div:nth-child(2) {
+    position: absolute;
+    background-image: url("../img/c1.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 8rem;
+    height: 8rem;
+    margin: 0 auto;
+    top: -20px;
+    left: -50px;
+}
+
+.myimg div:nth-child(3) {
+    position: absolute;
+    background-image: url("../img/c2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+    width: 6rem;
+    height: 6rem;
+    margin: 0 auto;
+    top: 120px;
+    left: 120px;
+}
+
+.bigTitle {
+    width: 68%;
     padding: 2rem 0;
     margin: 10rem auto 20rem auto;
     text-align: left;
+    display: flex;
 }
 
-.bigTitle>h1 {
-    
-    font-size: 6rem;
+.bigTitle h1 {
+    font-size: 5rem;
     padding: 0;
     margin: 0;
     font-weight: bold;
     text-transform: capitalize;
     letter-spacing: .33rem;
-    color:#FDBB87;
+    color: #FDBB87;
 }
-.bigTitle>p {
-    font-size: 1.4rem;
+
+.bigTitle p {
+    font-size: 1.2rem;
     padding: 2rem 0.5rem;
     margin: 0;
     font-weight: 500;
@@ -188,6 +391,10 @@ p{
     letter-spacing: .11rem;
 }
 
+.titleText {
+    flex-wrap: wrap;
+    margin: 1rem;
+}
 
 /* .home313{
     width:400px;
@@ -201,13 +408,12 @@ p{
 #about {
     width: 100%;
     margin: 0;
-    padding:0;
+    padding: 0;
     color: #efe8d8;
     display: flex;
 }
 
-#about .subtitle,
-#process .subtitle {
+#about .subtitle, #process .subtitle {
     flex: 1;
 }
 
@@ -218,14 +424,13 @@ p{
     text-align: center;
 }
 
-#about .empty,
-#process .empty {
+#about .empty, #process .empty {
     flex: 1;
-} 
+}
 
- #about .box p {
+#about .box p {
     padding: 2rem;
-    margin:3.5rem auto;
+    margin: 3.5rem auto;
     text-align: justify;
     line-height: 1.55rem;
 }
@@ -240,9 +445,7 @@ p{
     font-size: 2rem;
 }
 
-
 /* project1 */
-
 
 #process {
     width: 100%;
@@ -304,6 +507,5 @@ p{
     width: 100%;
     text-align: center;
     top: 2rem;
-    z-index:-1;
+    z-index: -1;
 }
-
