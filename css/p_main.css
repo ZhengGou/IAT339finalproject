@@ -20,7 +20,6 @@ body {
 }
 
 header {
-    
     padding-top: 1px;
 }
 
@@ -39,7 +38,6 @@ a {
     position: fixed;
     left: 0;
     margin: 5rem 6rem;
-   
     z-index: 100;
 }
 
@@ -80,6 +78,7 @@ p {
     left: 0;
     margin: 3rem 6rem; */
 }
+
 /* .hover-this{
     transition: all 0.3s ease;
 }
@@ -127,9 +126,9 @@ p {
     color: #000;
     text-align: center;
     transition: color .5s linear, font-weight 1s, font-size .5s;
-} 
+}
 
- #top_nav a:hover, #top_nav a:focus {
+#top_nav a:hover, #top_nav a:focus {
     font-weight: bold;
     color: #FDBB87;
     font-size: 20px;
@@ -172,9 +171,7 @@ footer h5 {
 
 /* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
 
-
 .container {
-  
     position: fixed;
     top: 60px;
     right: 50px;
@@ -186,6 +183,7 @@ footer h5 {
     width: 100px;
     height: 100px;
     transform: scale(.3);
+    z-index: 1000;
 }
 
 #menu:before, #menu:after {
@@ -199,15 +197,18 @@ footer h5 {
     right: 0;
     -webkit-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
+    z-index: 1000;
 }
 
 #menu:before {
     top: 5px;
     box-shadow: 0 37px #999;
+    z-index: 1000;
 }
 
 #menu:after {
     bottom: 5px;
+    z-index: 1000;
 }
 
 #menu:hover:before {
@@ -215,15 +216,17 @@ footer h5 {
     box-shadow: none;
     -webkit-transform: rotate(225deg);
     transform: rotate(225deg);
+    z-index: 1000;
 }
 
 #menu:hover:after {
     bottom: 42px;
     -webkit-transform: rotate(135deg);
     transform: rotate(135deg);
-} 
+    z-index: 1000;
+}
 
- #side_nav {
+#side_nav {
     height: 100%;
     position: fixed;
     top: 0;
@@ -231,6 +234,7 @@ footer h5 {
     background-color: #fff;
     opacity: 0;
     transition: right .5s, opcity .5s;
+    z-index: 1;
 }
 
 /* Styling Home page */
@@ -448,13 +452,14 @@ footer h5 {
 }
 
 #about .box {
+    border:2px solid red;
     flex: 2;
     padding: 10rem 2rem 10rem 4rem;
     display: block;
     text-align: justify;
 }
 
-#project .box{
+#project .box {
     flex: 7;
     margin: 3rem 10rem 10rem 0;
     padding: 0;
@@ -509,11 +514,12 @@ footer h5 {
     left: 120px;
 }
 
-#about .empty, #process .empty #project .empty{
+#about .empty, #process .empty #project .empty {
     flex: 1;
 }
 
-#about .box p{
+#about .box p {
+    border:2px solid red;
     padding: 2rem;
     margin: 3.5rem auto;
     text-align: justify;
@@ -521,7 +527,7 @@ footer h5 {
 }
 
 #project .box p {
-    width:60%;
+    width: 60%;
     padding: 0;
     margin: 3.5rem auto;
     text-align: justify;
@@ -561,13 +567,13 @@ footer h5 {
     padding: 1rem;
     border: 2px solid #fff;
     margin: .5rem auto;
-    display:block;
+    display: block;
     text-align: center;
 }
 
-#process .box .flexing p{
+#process .box .flexing p {
     text-align: justify;
-    width:60%;
+    width: 60%;
 }
 
 #process .box p {
@@ -606,4 +612,139 @@ footer h5 {
     text-align: center;
     top: 2rem;
     z-index: -1;
+}
+
+
+
+
+
+@media screen and (max-width:80em) {
+    #logo {
+        margin: 2rem 3rem;
+    }
+    #logo a img {
+        width: 42px;
+        height: 42px;
+    }
+    /* footer icon */
+    .fab {
+        font-size: 22px;
+    }
+    /* menu icon */
+    .container {
+        top: 1px;
+        right: 10px;
+        overflow: hidden;
+    }
+
+    #menu {
+        transform: scale(.3);
+    }
+
+    /* main */
+    main {
+        margin: 0 8rem;
+    }
+    .bigTitle {
+        width: 100%;
+    }
+    /*About section*/
+    #about, #project {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        color: #efe8d8;
+        display: block;
+    }
+    #about .subtitle, #process .subtitle, #project .subtitle {
+        display: none;
+    }
+    #about .box {
+        width: 100%;
+        padding:0 0rem;
+        margin:0 auto;
+
+    }
+    #about .box p {
+        width: 100%;
+        height: auto;
+        margin:0rem;
+    }
+    #about .myimg{
+        margin-bottom: 0;
+    }
+    
+    .myimg div:nth-child(2),.myimg div:nth-child(3){
+        display: none;
+    }
+    #project .box {
+        width: 100%;
+    }
+    #project .box img {
+        width: 100%;
+    }
+    #about .empty, #process .empty #project .empty {
+        display: none;
+    }
+    #project .box p {
+        width: 90%;
+    }
+    /* project1 */
+    #process {
+        display: block;
+    }
+    #process .box {
+        width: 100%;
+    }
+    #process .box .flexing img {
+        width: 100%;
+    }
+    #process .box .flexing p {
+        width: 100%;
+    }
+    #process .box p {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        
+        margin-right: 0;
+    }
+
+    .pos2{
+        padding:1px;
+    }
+}
+
+@media screen and (max-width:30em) {
+    /* top logo */
+    #logo a img {
+        width: 30px;
+        height: 30px;
+    }
+    /* menu icon */
+    .container {
+        top: 1px;
+        right: 10px;
+        overflow: hidden;
+    }
+
+    #menu {
+        transform: scale(.24);
+    }
+
+    /* main */
+    main {
+        margin: 0 0rem;
+    }
+    #about .box {
+        width: 100%;
+        padding:0 auto;
+        margin:0 auto;
+
+    }
+    #about .box p {
+        width: 100%;
+        height: auto;
+        margin:0rem;
+    }
 }
