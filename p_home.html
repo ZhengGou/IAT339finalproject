@@ -9,16 +9,19 @@
     <link rel="icon" type="image/icon" href="img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
+
+
     <title>HWY Portfolio</title>
 
     <link href="css/p_main.css" rel="stylesheet">
-    <script src="js/nav.js"></script>
+
 </head>
 
 <body>
 
     <header class="header" id="topOfThePage">
-        <div id="logo">
+        <div id="logo" data-aos="fade-right">
             <a href="p_home.html"> <img src="img/wlogo.png" alt="" width="100" /></a>
         </div>
 
@@ -27,11 +30,11 @@
             <div id="menu" onclick="toggleNav()"></div>
         </div>
         <div id="side_nav">
-            <nav id="top_nav">
-                <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
-                <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
-                <a href="p_about.html" class="hover-this"><span>About</span></a>
-            </nav>
+        <nav id="top_nav">
+            <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
+            <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
+            <a href="p_about.html" class="hover-this"><span>About</span></a>
+        </nav>
         </div>
         <!-- <div class="cursor"></div> -->
     </header>
@@ -90,11 +93,11 @@
 
 
         <section class="bigTitle">
-           
-            <div class="titleText">
-                <h1>Wenyue He</h1>
-                
-                <p>graphic & web designer, photographer</p>
+
+            <div class="titleText" data-aos="fade-up">
+                <h1 data-aos="fade-up">Wenyue He</h1>
+
+                <p data-aos="fade-up" data-aos-delay="200">graphic & web designer, photographer</p>
 
             </div>
         </section>
@@ -103,12 +106,12 @@
 
     <footer>
         <section id="connect">
-            
+
             <a href="https://www.facebook.com/profile.php?id=100010960484225"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
             <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-            <h5>Phone:   604xxxxxxxx</h5>
-            <h5>Gmail:   wenyueh@sfu.ca</h5>
+            <h5>Phone: 604xxxxxxxx</h5>
+            <h5>Gmail: wenyueh@sfu.ca</h5>
             <div class="footer-nav">
                 <a href="sg_home.html">Style Guide</a>
                 <a href="sg_citations.html">Citations</a>
@@ -118,7 +121,11 @@
     </footer>
 
 
-
+    <script src="js/nav.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>

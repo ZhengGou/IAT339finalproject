@@ -15,8 +15,9 @@ body {
     color: white;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll;
-    /* cursor:none; */
+    overflow-y: scroll; 
+   /* cursor:none; */
+   
 }
 
 header {
@@ -26,6 +27,8 @@ header {
 main {
     position: relative;
     text-align: center;
+    width:100vw;
+  
 }
 
 a {
@@ -78,8 +81,8 @@ p {
     left: 0;
     margin: 3rem 6rem; */
 }
-
-/* .hover-this{
+/* 
+.hover-this{
     transition: all 0.3s ease;
 }
 #top_nav a span{
@@ -115,7 +118,7 @@ p {
         padding: 20px 0;
         display: inline-block;
     }
-} */
+}  */
 
 #top_nav a {
     font-size: 14px;
@@ -196,6 +199,9 @@ footer h5 {
     position: absolute;
     right: 0;
     -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
     z-index: 1000;
 }
@@ -215,6 +221,9 @@ footer h5 {
     top: 42px;
     box-shadow: none;
     -webkit-transform: rotate(225deg);
+    -moz-transform: rotate(225deg);
+    -o-transform: rotate(225deg);
+    -ms-transform: rotate(225deg);
     transform: rotate(225deg);
     z-index: 1000;
 }
@@ -222,6 +231,9 @@ footer h5 {
 #menu:hover:after {
     bottom: 42px;
     -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
     transform: rotate(135deg);
     z-index: 1000;
 }
@@ -244,7 +256,7 @@ footer h5 {
 .bubbles {
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     z-index: 0;
     overflow: hidden;
     top: 0;
@@ -318,13 +330,25 @@ footer h5 {
 @keyframes flying {
     0% {
         bottom: -100px;
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -o-transform: translateX(100px);
+        -ms-transform: translateX(100px);
         transform: translateX(100px);
     }
     50% {
+        -webkit-transform: translateX(100px);
+        -moz-transform: translateX(100px);
+        -o-transform: translateX(100px);
+        -ms-transform: translateX(100px);
         transform: translateX(100px);
     }
     100% {
         bottom: 1080px;
+        -webkit-transform: translateX(-200px);
+        -moz-transform: translateX(-200px);
+        -o-transform: translateX(-200px);
+        -ms-transform: translateX(-200px);
         transform: translateX(-200px);
     }
 }
@@ -452,7 +476,7 @@ footer h5 {
 }
 
 #about .box {
-    border:2px solid red;
+    
     flex: 2;
     padding: 10rem 2rem 10rem 4rem;
     display: block;
@@ -519,7 +543,7 @@ footer h5 {
 }
 
 #about .box p {
-    border:2px solid red;
+    
     padding: 2rem;
     margin: 3.5rem auto;
     text-align: justify;
@@ -535,8 +559,11 @@ footer h5 {
 }
 
 .upright {
-    writing-mode: vertical-lr;
+    -webkit-text-orientation: upright;
+    -moz-text-orientation: upright;
+    -o-text-orientation: upright;
     text-orientation: upright;
+    writing-mode: vertical-lr;
     text-transform: capitalize;
     padding-top: 100px;
     padding-left: .5rem;
@@ -590,6 +617,10 @@ footer h5 {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     font-size: 1.75rem;
     font-weight: 300;
     letter-spacing: .1rem;
