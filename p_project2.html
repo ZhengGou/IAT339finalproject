@@ -9,7 +9,8 @@
     <link rel="icon" type="image/icon" href="img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>The maid</title>
+    <link rel="stylesheet" href="css/aos.css" />
+    <title>Project - Undersea</title>
 
     <link href="css/p_main.css" rel="stylesheet">
     <script src="js/nav.js"></script>
@@ -18,7 +19,7 @@
 <body>
 
     <header class="header" id="topOfThePage">
-        <div id="logo">
+        <div id="logo" data-aos="fade-right" data-aos-duration="500">
             <a href="p_home.html"> <img src="img/wlogo.png" alt="" width="100" /></a>
         </div>
 
@@ -27,23 +28,36 @@
             <div id="menu" onclick="toggleNav()"></div>
         </div>
         <div id="side_nav">
-            <nav id="top_nav">
-                <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
-                <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
-                <a href="p_about.html" class="hover-this"><span>About</span></a>
+            <nav class="top_nav">
+                <a href="p_project1.html"><span>The maid</span></a>
+                <a href="p_project2.html"><span>Undersea</span></a>
+                <a href="p_about.html"><span>About</span></a>
+            </nav>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav>
+                <a href="p_project1.html" class="hover-this"  data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000"><span>The maid</span></a>
+                <a href="p_project2.html" class="hover-this"  data-aos="fade-up" data-aos-delay="500" data-aos-duration="1000"><span>Undersea</span></a>
+                <a href="p_about.html" class="hover-this"  data-aos="fade-up" data-aos-delay="750" data-aos-duration="1000"><span>About</span></a>
+                <div class="cursor"></div>
             </nav>
         </div>
     </header>
 
-    <main>
-
-        <section class="bigTitle">
+    <main id="p1 up"> 
+        <section class="titleBG">
+            <div id="the-fish-bg"></div>
+            <div id="haze-filter"></div>
+        </section>
+        <section>
             <div class="titleText">
-                <h1>Game</h1>
-                <h2>Design</h2>
-                <p>Small shooting game: Undersea</p>
+                <h1 data-aos="fade-up" data-aos-duration="2000">Game</h1>
+                <h2 data-aos="fade-up" data-aos-delay="250" data-aos-duration="2000">Design</h2>
+                <p data-aos="fade-up" data-aos-delay="500" data-aos-duration="2000">Small shooting game: Undersea</p>
             </div>
         </section>
+
         <section id="project">
             <!--Introduction-->
             <div class="subtitle">
@@ -156,7 +170,11 @@
         </section>
     </footer>
 
-
+    <script src="js/nav.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 

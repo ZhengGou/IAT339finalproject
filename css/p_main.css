@@ -10,7 +10,7 @@ html {
 
 body {
     background: #111;
-    font-family: "Neuzeit-Grotesk", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Neuzeit-Grotesk", "Open Sans", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: white;
     width: 100%;
@@ -423,7 +423,7 @@ footer h5 {
     letter-spacing: .11rem;
 }
 
-.overview-the-maid {
+.project-overview {
     position: relative;
     margin-top: 0;
     margin-bottom: 0;
@@ -437,24 +437,24 @@ footer h5 {
     z-index: 0;
 }
 
-.overview-the-maid div {
+.project-overview div {
     flex-wrap: wrap;
     margin: auto 4rem;
     text-align: justify;
     font-size: .8rem;
 }
 
-.overview-the-maid div h3 {
+.project-overview div h3 {
     color: #FDBB87;
     margin: 1rem 0;
 }
 
-.overview-the-maid div p {
+.project-overview div p {
     color: white;
     letter-spacing: .2rem;
 }
 
-.overview-the-maid #view-website {
+.project-overview #view-website {
     position: absolute;
     top: 40vh;
     right: 5rem;
@@ -462,7 +462,7 @@ footer h5 {
     text-align: center;
 }
 
-.overview-the-maid div a {
+.project-overview div a {
     text-decoration: none;
     font-weight: 600;
     color: white;
@@ -470,7 +470,7 @@ footer h5 {
     transition: color .5s;
 }
 
-.overview-the-maid div a:hover, .overview-the-maid div a:focus, .overview-the-maid div a:active {
+.project-overview div a:hover, .project-overview div a:focus, .project-overview div a:active {
     text-decoration: underline;
     color: #FDBB87;
 }
@@ -661,6 +661,19 @@ footer h5 {
     margin: 2rem;
     text-align: justify;
     color: #111;
+}
+
+
+/* project 2 */
+#the-fish-bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/gameEnvironment.jpg");
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    opacity:.75;
+    z-index: -1;
 }
 
 /*About section*/
@@ -878,25 +891,25 @@ footer h5 {
         margin: 0 auto;
     }
 
-    .overview-the-maid {
+    .project-overview {
         height: 75vh;
         display: block;
         padding: 4rem 14%;
         margin: 0;
     }
-    .overview-the-maid div {
+    .project-overview div {
         display: block;
         margin: 0;
     }
-    .overview-the-maid #view-website {
+    .project-overview #view-website {
         font-size: .9rem;
         top: 50vh;
         right: 10%;
     }
-    .overview-the-maid div h3 {
+    .project-overview div h3 {
         font-size: 1rem;
     }
-    .overview-the-maid div p {
+    .project-overview div p {
         font-size: .9rem;
         font-weight: 100;
     }
@@ -1009,29 +1022,29 @@ footer h5 {
         font-size: 40pt;
     }
 
-    .overview-the-maid {
+    .project-overview {
         height: 70vh;
         display: block;
         text-align: center;
         padding:0;
         margin: 5rem auto 0 auto;
     }
-    .overview-the-maid div {
+    .project-overview div {
         display: block;
         margin: 1.5rem auto;
     }
-    .overview-the-maid #view-website {
+    .project-overview #view-website {
         font-size: .9rem;
         display:block;
         padding:0;
         margin:0;
     }
-    .overview-the-maid div h3 {
+    .project-overview div h3 {
         font-size: 1rem;
         text-align: center;
         margin:.5rem auto;
     }
-    .overview-the-maid div p {
+    .project-overview div p {
         font-size: .9rem;
         font-weight: 100;
         text-align: center;
