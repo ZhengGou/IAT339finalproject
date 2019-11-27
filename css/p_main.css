@@ -9,15 +9,14 @@ html {
 }
 
 body {
-    background: #222222;
+    background: #111;
     font-family: "Neuzeit-Grotesk", "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-size: 16px;
     color: white;
     width: 100%;
     overflow-x: hidden;
-    overflow-y: scroll; 
-   /* cursor:none; */
-   
+    overflow-y: scroll;
+    cursor:none;
 }
 
 header {
@@ -27,8 +26,7 @@ header {
 main {
     position: relative;
     text-align: center;
-    width:100vw;
-  
+    width: 100vw;
 }
 
 a {
@@ -38,10 +36,10 @@ a {
 /* top logo */
 
 #logo {
-    position: fixed;
+    position: absolute;
     left: 0;
-    margin: 5rem 6rem;
-    z-index: 100;
+    margin: 4rem 5rem;
+    z-index: 10000;
 }
 
 #logo a img {
@@ -74,69 +72,76 @@ p {
 
 /* header nav*/
 
-#top_nav {
-    display: block;
-    margin-top: 15rem;
-    /* position: absolute;
-    left: 0;
-    margin: 3rem 6rem; */
+.nav-wrapper {
+    width: 50%;
+    margin:1rem 0;
+    position: absolute;
+    top:4rem;
+    right:.5rem;
 }
-/* 
-.hover-this{
+
+.nav-wrapper nav a{
+    z-index:1;
+    margin:0 auto;
+    padding:0 1rem;
+    display:block;
+}
+
+.nav-wrapper nav {
+    width: 100%;
+    margin: 0;
+    text-align: center;
+}
+
+.hover-this {
     transition: all 0.3s ease;
 }
-#top_nav a span{
+
+.nav-wrapper nav a span{
     display: inline-block;
+    font-weight: 100;
+    color: #fff;
+    font-size: 1.5rem;
+    text-transform: uppercase;
     pointer-events: none;
     transition: transform 0.1s linear;
 }
-.cursor{
+
+.cursor {
     pointer-events: none;
     position: fixed;
-    padding:0.3rem;
-    border-radius: 50%;
+    padding: 0.3rem;
     background-color: #fff;
+    border-radius: 50%;
+    z-index:100000;
     mix-blend-mode: difference;
     transition: transform 0.3s ease;
 }
-.hover-this:hover~.cursor{
-    transform:translate(-50%,-50%)scale(8);
-}
-@media(min-width:900px){
-    .top_nav{
-        display: flex;
-        justify-content: space-around;
-    }
-}
-@media(max-width:900px){
-    .top_nav{
-        top:30%;
-        
-    }
-    .hover-this{
-        width:100%;
-        padding: 20px 0;
-        display: inline-block;
-    }
-}  */
 
-#top_nav a {
-    font-size: 14px;
-    line-height: 2rem;
-    text-decoration: none;
-    padding: 1em 2em;
-    display: block;
-    color: #000;
-    text-align: center;
-    transition: color .5s linear, font-weight 1s, font-size .5s;
+.hover-this:hover ~ .cursor {
+    transform: translate(-10%, -10%) scale(6);
 }
 
-#top_nav a:hover, #top_nav a:focus {
-    font-weight: bold;
-    color: #FDBB87;
-    font-size: 20px;
-    text-decoration: none;
+@media(min-width: 900px) {
+    nav {
+          display: flex;
+          justify-content: space-around;
+    }
 }
+
+@media(max-width: 900px) {
+    nav {
+          top: 30%;
+    }
+
+    .hover-this {
+          width: 100%;
+          padding: 20px 0;
+          display: inline-block;
+    }
+}
+
+
 
 /*  styling footer  */
 
@@ -150,6 +155,8 @@ footer {
     text-decoration: none;
     color: #F6EDDE;
     padding: .5em;
+    font-size:.88rem;
+    line-height: 1.5rem;
 }
 
 .footer-nav a:active, .footer-nav a:hover, .footer-nav a:focus {
@@ -159,9 +166,11 @@ footer {
 /* footer icon */
 
 .fab {
-    font-size: 17px;
+    font-size: 20px;
     color: #69524B;
-    letter-spacing: .5em;
+    text-align: center;
+    margin:0 auto;
+    padding:0 .5rem;
 }
 
 .fab:active, .fab:hover, .fab:focus {
@@ -170,6 +179,8 @@ footer {
 
 footer h5 {
     color: #F6EDDE;
+    font-size:.75rem;
+    line-height: 1.5rem;
 }
 
 /* reference code：https://blog.csdn.net/FungLeo/article/details/77931563 */
@@ -178,8 +189,9 @@ footer h5 {
     position: fixed;
     top: 60px;
     right: 50px;
-    z-index: 100;
+    z-index: 1000;
     overflow: hidden;
+    display: none;
 }
 
 #menu {
@@ -194,21 +206,18 @@ footer h5 {
     display: block;
     width: 100px;
     height: 16px;
-    background: #999;
+    background: #fff;
     border-radius: 8px;
     position: absolute;
     right: 0;
     -webkit-transition: all 0.15s ease-in-out;
-    -moz-transition: all 0.15s ease-in-out;
-    -o-transition: all 0.15s ease-in-out;
-    -ms-transition: all 0.15s ease-in-out;
     transition: all 0.15s ease-in-out;
     z-index: 1000;
 }
 
 #menu:before {
     top: 5px;
-    box-shadow: 0 37px #999;
+    box-shadow: 0 37px #fff;
     z-index: 1000;
 }
 
@@ -221,9 +230,6 @@ footer h5 {
     top: 42px;
     box-shadow: none;
     -webkit-transform: rotate(225deg);
-    -moz-transform: rotate(225deg);
-    -o-transform: rotate(225deg);
-    -ms-transform: rotate(225deg);
     transform: rotate(225deg);
     z-index: 1000;
 }
@@ -231,32 +237,32 @@ footer h5 {
 #menu:hover:after {
     bottom: 42px;
     -webkit-transform: rotate(135deg);
-    -moz-transform: rotate(135deg);
-    -o-transform: rotate(135deg);
-    -ms-transform: rotate(135deg);
     transform: rotate(135deg);
     z-index: 1000;
 }
 
 #side_nav {
+    display:none;
     height: 100%;
     position: fixed;
     top: 0;
     right: -300px;
     background-color: #fff;
     opacity: 0;
-    transition: right .5s, opcity .5s;
-    z-index: 1;
+    transition: right .5s, opacity .5s;
+    z-index: 10;
 }
 
-/* Styling Home page */
+.top_nav{
+    display: none;
+}
 
 /* home bg */
 
 .bubbles {
     position: absolute;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: 0;
     overflow: hidden;
     top: 0;
@@ -330,115 +336,72 @@ footer h5 {
 @keyframes flying {
     0% {
         bottom: -100px;
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -o-transform: translateX(100px);
-        -ms-transform: translateX(100px);
         transform: translateX(100px);
     }
     50% {
-        -webkit-transform: translateX(100px);
-        -moz-transform: translateX(100px);
-        -o-transform: translateX(100px);
-        -ms-transform: translateX(100px);
         transform: translateX(100px);
     }
     100% {
         bottom: 1080px;
-        -webkit-transform: translateX(-200px);
-        -moz-transform: translateX(-200px);
-        -o-transform: translateX(-200px);
-        -ms-transform: translateX(-200px);
         transform: translateX(-200px);
     }
 }
 
-/* .bghome{
-    position: fixed;
-    width: 100%;
-    height: 100%;
+
+/* homepage */
+#homeHtml{
     overflow: hidden;
-    opacity: 0.2;
 }
-.bghome .rotate{
-    position:absolute;
-    top:calc(50%-200px);
-    left:calc(50%-200px);
-    width:400px;
-    height:400px;
-    transform-style: preserve-3d;
-    animation: rotate 20s linear infinite;
-    zoom:4;
+
+#homepage{
+    height:77vh;
 }
-@keyframes rotate{
-    0%{
-        transform:rotateX(0deg) rotateY(0deg);
-    }
-    100%{
-        transform:rotateX(360deg) rotateY(360deg);
-    }
+
+/* main - The Maid */
+
+#p1 {
+    position: relative;
 }
-.bghome .rotate .sphere{
+
+.titleBG {
+    margin-top: 0;
+}
+
+#the-maid-bg {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/themaid.jpg");
+    background-size: cover;
+    background-position: center;
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
+    z-index: -1;
 }
 
-.bghome .rotate .sphere:nth-child(2){
-    transform:rotate(90deg);
-}
-.bghome .rotate .sphere:nth-child(3){
-    transform:rotate(45deg);
-}
-.bghome .rotate .sphere:nth-child(4){
-    transform:rotate(-45deg);
-}
-.bghome .rotate .sphere span{
+#haze-filter {
+    background-color: #334;
     position: absolute;
-    top:0;
-    left:0;
-    width:100%;
-    height: 100%;
-    transform-style: preserve-3d;
-    background:radial-gradient(#ccc,#fff);
-    border-radius: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    opacity: .5;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
 }
 
-.bghome .rotate .sphere span:nth-child(1){
-    transform:rotateY(0deg);
-}
-
-.bghome .rotate .sphere span:nth-child(2){
-    transform:rotateY(30deg);
-}
-.bghome .rotate .sphere span:nth-child(3){
-    transform:rotateY(60deg);
-}
-.bghome .rotate .sphere span:nth-child(4){
-    transform:rotateY(90deg);
-}
-.bghome .rotate .sphere span:nth-child(5){
-    transform:rotateY(120deg);
-}
-.bghome .rotate .sphere span:nth-child(6){
-    transform:rotateY(150deg);
-}
-
- */
-
-.bigTitle {
+.titleText {
     width: 68%;
-    padding: 2rem 0;
-    margin: 10rem auto 15rem auto;
+    height: 100vh;
+    padding-top: 15rem;
+    margin: 0 auto;
     text-align: left;
-    display: flex;
+    z-index: 100;
 }
 
-.bigTitle h1 {
+.titleText h1 {
     font-size: 5rem;
+    line-height:4rem;
     padding: 0;
     margin: 0;
     font-weight: bold;
@@ -447,7 +410,11 @@ footer h5 {
     color: #FDBB87;
 }
 
-.bigTitle p {
+.titleText h2 {
+    padding-left:.5rem;
+}
+
+.titleText p {
     font-size: 1.2rem;
     padding: 2rem 0.5rem;
     margin: 0;
@@ -456,14 +423,249 @@ footer h5 {
     letter-spacing: .11rem;
 }
 
-.titleText {
+.overview-the-maid {
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    background-color: #111;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    padding: 3rem 6rem;
+    z-index: 0;
+}
+
+.overview-the-maid div {
     flex-wrap: wrap;
+    margin: auto 4rem;
+    text-align: justify;
+    font-size: .8rem;
+}
+
+.overview-the-maid div h3 {
+    color: #FDBB87;
+    margin: 1rem 0;
+}
+
+.overview-the-maid div p {
+    color: white;
+    letter-spacing: .2rem;
+}
+
+.overview-the-maid #view-website {
+    position: absolute;
+    top: 40vh;
+    right: 5rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.overview-the-maid div a {
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    letter-spacing: .2rem;
+    transition: color .5s;
+}
+
+.overview-the-maid div a:hover, .overview-the-maid div a:focus, .overview-the-maid div a:active {
+    text-decoration: underline;
+    color: #FDBB87;
+}
+
+/* project1 */
+
+#project {
+    width: 100%;
+    height: 100vh;
+    padding-top: 2rem;
+    background-color: white;
+    position: relative;
+}
+
+#project .subtitle .longdash {
+    position: absolute;
+    top: 6.25rem;
+    left: 0;
+    width: 50px;
+    height: 0;
+    border: 1px solid #ccc;
+}
+
+.subtitle h1 {
+    width: 4rem;
+    font-size: 3rem;
+    font-weight: lighter;
+    color: #666;
+    text-align: left;
+    margin: 0 0 0 4rem;
+    padding-top: 2rem;
+}
+
+#project .box {
+    width: 68%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#project .box h1 {
+    font-size: 10rem;
+    font-weight: bolder;
+    text-align: left;
+    flex: 1;
+    background-image: url("../img/themaid.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    -webkit-background-clip: text;
+    background-clip: text;
+    line-height: 10rem;
+    color: rgba(0, 0, 0, 0);
+}
+
+#project .box p {
+    font-size: 1rem;
+    text-align: justify;
+    flex: 1;
+    line-height: 1.5rem;
+    color: #111;
+    padding-top: 5rem;
+}
+
+#process {
+    width: 100%;
+    min-height: 100vh;
+    max-height: auto;
+    padding: 2rem 0;
+    background-color: #111;
+    position: relative;
+}
+
+#process .subtitle .longdash, #draftImage .subtitle .longdash {
+    position: absolute;
+    top: 6.25rem;
+    left: 0;
+    width: 50px;
+    height: 0;
+    border: 1px solid #aaa;
+}
+
+#process .box, #draftImage .box {
+    width: 68%;
+    height: 50vh;
+    margin: 0 auto;
+    display: flex;
+}
+
+#process .box h1, #draftImage .box h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    text-align: left;
+    flex: 1;
+    color: #fff;
+    mix-blend-mode: difference;
+    padding: 2rem 0 0 0;
+    margin: 0;
+}
+
+#process .box p {
+    font-size: 1rem;
+    text-align: justify;
+    flex: 1;
+    line-height: 1.5rem;
+    color: white;
+    padding-top: 3rem;
+}
+
+#process .pos1 {
+    width: 68%;
+    margin: 0 auto;
+}
+
+#process .pos1 div {
+    margin: 1rem auto;
+    position: relative;
+}
+
+#process .pos1 div h3 {
+    text-align: left;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0;
+    padding-left:3.75rem;
+    padding-top: 2rem;
+    color:#666;
+}
+
+#process .pos1 div .dashed{
+    position: absolute;
+    top: 2.25rem;
+    left: .2rem;
+    width: 3rem;
+    height: 0;
+    border: 1px solid #666;
+}
+
+.flexing {
+    display: flex;
+}
+
+.flexing img {
+    flex: 1;
+    width: 400px;
+    height: auto;
+    padding: 0 2.25rem 0 .2rem;
+}
+
+.flexing p {
+    flex: 1.1;
+    margin: auto 0;
+    padding: 0;
+    text-align: justify;
+}
+
+#draftImage {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem 0;
+    background-color: white;
+    position: relative;
+}
+
+#draftImage .box p {
+    font-size: 1rem;
+    text-align: justify;
+    flex: 1;
+    line-height: 1.5rem;
+    color: #111;
+    padding-top: 3rem;
+}
+
+#draftImage .pos1 {
+    width: 68%;
+    margin: 0 auto;
+    color: #111;
+}
+
+#draftImage .pos1 h3 {
+    font-size: 1.75rem;
     margin: 1rem;
+    text-align: left;
+    color:#666;
+}
+
+#draftImage .pos1 p {
+    font-size: 1.5rem;
+    font-weight: 100;
+    margin: 2rem;
+    text-align: justify;
+    color: #111;
 }
 
 /*About section*/
 
-#about, #project {
+#about {
     width: 100%;
     margin: 0;
     padding: 0;
@@ -471,24 +673,15 @@ footer h5 {
     display: flex;
 }
 
-#about .subtitle, #process .subtitle, #project .subtitle {
+#about .subtitle {
     flex: 1;
 }
 
 #about .box {
-    
     flex: 2;
     padding: 10rem 2rem 10rem 4rem;
     display: block;
     text-align: justify;
-}
-
-#project .box {
-    flex: 7;
-    margin: 3rem 10rem 10rem 0;
-    padding: 0;
-    text-align: center;
-    display: block;
 }
 
 .myimg {
@@ -538,120 +731,85 @@ footer h5 {
     left: 120px;
 }
 
-#about .empty, #process .empty #project .empty {
+#about .empty {
     flex: 1;
 }
 
 #about .box p {
-    
     padding: 2rem;
     margin: 3.5rem auto;
     text-align: justify;
     line-height: 1.55rem;
 }
 
-#project .box p {
-    width: 60%;
-    padding: 0;
-    margin: 3.5rem auto;
-    text-align: justify;
-    line-height: 1.55rem;
+.up a{
+    position:fixed;
+    padding:0 .8rem;
+    font-size:2rem;
+    bottom:1.25rem;
+    right:2.25rem;
+    mix-blend-mode: difference;
+    border-radius:20%;
+    color:#fff;
+    opacity:.5;
+    mix-blend-mode: difference;
+    text-decoration: none;
+    transition: bottom .25s, right .25s, font-size .25s, opacity .25s;
 }
 
-.upright {
-    -webkit-text-orientation: upright;
-    -moz-text-orientation: upright;
-    -o-text-orientation: upright;
-    text-orientation: upright;
-    writing-mode: vertical-lr;
-    text-transform: capitalize;
-    padding-top: 100px;
-    padding-left: .5rem;
-    font-weight: 100;
-    font-size: 2rem;
+.up a:hover, .up a:active, .up a:focus{
+    bottom:.75rem;
+    right:1.75rem;
+    font-size:3rem;
+    opacity:1;
+    mix-blend-mode: difference;
 }
-
-/* project1 */
-
-#process {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    color: white;
-    display: flex;
-}
-
-#process .box {
-    flex: 7;
-    margin: 3rem 10rem 1rem 0;
-    padding: 0;
-    text-align: center;
-}
-
-#process .box .flexing img {
-    width: 400px;
-    height: auto;
-    padding: 1rem;
-    border: 2px solid #fff;
-    margin: .5rem auto;
-    display: block;
-    text-align: center;
-}
-
-#process .box .flexing p {
-    text-align: justify;
-    width: 60%;
-}
-
-#process .box p {
-    margin: .5rem;
-    padding: 1rem;
-    width: 400px;
-    height: auto;
-    display: inline-block;
-    text-align: justify;
-    line-height: 1.55rem;
-}
-
-#process h3 {
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    font-size: 1.75rem;
-    font-weight: 300;
-    letter-spacing: .1rem;
-    top: 2rem;
-}
-
-#process .flexing {
-    padding-top: 2rem;
-    display: block;
-}
-
-.posSpacing {
-    padding-bottom: 3rem;
-    margin: 6rem auto 1rem auto;
-}
-
-.pos2 {
-    position: relative;
-    width: 100%;
-    text-align: center;
-    top: 2rem;
-    z-index: -1;
-}
-
-
-
-
 
 @media screen and (max-width:80em) {
+    .nav-wrapper nav a{
+        display:none;
+    }
+
+    #side_nav {
+        display:block;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        background-color: #fff;
+        opacity: 0;
+        transition: right .5s, opacity .5s;
+        z-index: 10;
+    }
+
+    .top_nav a span{
+        display: block;
+        font-weight: 100;
+        color: #000;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        pointer-events: auto;
+        transition: transform 0.1s linear;
+        line-height: 2rem;
+        text-decoration: none;
+        padding: 1.5rem 2rem;
+        text-align: center;
+        transition: color .5s linear;
+    }
+
+    .top_nav{
+        display:block;
+        margin-top:15rem;
+    }
+    
+    .top_nav a span:hover, .top_nav a span:focus, .top_nav a span:active {
+        color: #FDBB87;
+    }
+
     #logo {
         margin: 2rem 3rem;
+        position: fixed;
+        mix-blend-mode: difference;
     }
     #logo a img {
         width: 42px;
@@ -666,116 +824,268 @@ footer h5 {
         top: 1px;
         right: 10px;
         overflow: hidden;
+        display:block;
+        mix-blend-mode: difference;
     }
-
     #menu {
         transform: scale(.3);
     }
-
     /* main */
     main {
-        margin: 0 8rem;
-    }
-    .bigTitle {
         width: 100%;
     }
     /*About section*/
-    #about, #project {
+    #about {
         width: 100%;
         margin: 0;
         padding: 0;
         color: #efe8d8;
         display: block;
     }
-    #about .subtitle, #process .subtitle, #project .subtitle {
+    #about .subtitle {
         display: none;
     }
     #about .box {
         width: 100%;
-        padding:0 0rem;
-        margin:0 auto;
-
+        padding: 0 0rem;
+        margin: 0 auto;
     }
     #about .box p {
         width: 100%;
         height: auto;
-        margin:0rem;
+        margin: 0rem;
     }
-    #about .myimg{
+    #about .myimg {
         margin-bottom: 0;
     }
-    
-    .myimg div:nth-child(2),.myimg div:nth-child(3){
+    .myimg div:nth-child(2), .myimg div:nth-child(3) {
         display: none;
     }
-    #project .box {
-        width: 100%;
-    }
-    #project .box img {
-        width: 100%;
-    }
-    #about .empty, #process .empty #project .empty {
+    #about .empty {
         display: none;
-    }
-    #project .box p {
-        width: 90%;
     }
     /* project1 */
-    #process {
-        display: block;
+    /* main - The Maid */
+    .titleBG {
+        margin-top: 0;
     }
-    #process .box {
-        width: 100%;
-    }
-    #process .box .flexing img {
-        width: 100%;
-    }
-    #process .box .flexing p {
-        width: 100%;
-    }
-    #process .box p {
-        width: 100%;
-        height: auto;
-        margin-left: 0;
-        
-        margin-right: 0;
+    #the-maid-bg {
+        background-position: 35% 50%;
     }
 
-    .pos2{
-        padding:1px;
+    .titleText {
+        padding-top: 15rem;
+        margin: 0 auto;
+    }
+
+    .overview-the-maid {
+        height: 75vh;
+        display: block;
+        padding: 4rem 14%;
+        margin: 0;
+    }
+    .overview-the-maid div {
+        display: block;
+        margin: 0;
+    }
+    .overview-the-maid #view-website {
+        font-size: .9rem;
+        top: 50vh;
+        right: 10%;
+    }
+    .overview-the-maid div h3 {
+        font-size: 1rem;
+    }
+    .overview-the-maid div p {
+        font-size: .9rem;
+        font-weight: 100;
+    }
+    /* project1 */
+    #project{
+        height:auto;
+        padding-bottom: 5rem;
+    }
+
+    #project .box {
+        width: 68%;
+        height:auto;
+        margin: 0 auto;
+        display: block;
+    }
+    #project .box h1 {
+        font-size: 8rem;
+        line-height:8rem;
+        text-align: center;
+        padding-top: 3rem;
+        display: block;
+    }
+    #project .box p {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-top: 5rem;
+    }
+
+    #process .box, #draftImage .box {
+        display: block;
+        height:auto;
+        margin-bottom:10rem;
+    }
+
+    #process .box h1, #draftImage .box h1{
+        display: block;
+        font-size:3rem;
+    }
+
+    #process .pos1 div h3 {
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    #process .pos1 div .dashed{
+        top: 2.05rem;
+    }
+
+    #draftImage .pos1 h3 {
+        font-size: 1.5rem;
+        margin: 1rem;
+        text-align: left;
+    }
+
+    #draftImage{
+        height:auto;
+    }
+
+    #draftImage .box p {
+        display: block;
+    }
+
+    .flexing {
+        display: block;
+    }
+    .flexing img {
+        width: 100%;
+        height:auto;
+        padding: 0 .2rem;
+    }
+    .flexing p {
+        width:100%;
+        margin: 0 auto;
+        padding: 2rem .2rem;
     }
 }
 
 @media screen and (max-width:30em) {
-    /* top logo */
+    #logo {
+        margin: 2rem 2.5rem;
+    }
     #logo a img {
-        width: 30px;
-        height: 30px;
+        width: 32px;
+        height: 32px;
+    }
+    /* footer icon */
+    .fab {
+        font-size: 25px;
     }
     /* menu icon */
-    .container {
-        top: 1px;
-        right: 10px;
-        overflow: hidden;
-    }
-
     #menu {
-        transform: scale(.24);
+        transform: scale(.25);
     }
 
-    /* main */
-    main {
-        margin: 0 0rem;
+    /* project1 */
+    /* main - The Maid */
+    #the-maid-bg {
+        background-position: 35% 50%;
     }
-    #about .box {
-        width: 100%;
-        padding:0 auto;
+
+    .titleText {
+        padding-top: 15rem;
+        margin: 0 auto;
+    }
+    *{
+        overflow-x: hidden;
+    }
+    .titleText h1{
+        font-size: 40pt;
+    }
+
+    .overview-the-maid {
+        height: 70vh;
+        display: block;
+        text-align: center;
+        padding:0;
+        margin: 5rem auto 0 auto;
+    }
+    .overview-the-maid div {
+        display: block;
+        margin: 1.5rem auto;
+    }
+    .overview-the-maid #view-website {
+        font-size: .9rem;
+        display:block;
+        padding:0;
+        margin:0;
+    }
+    .overview-the-maid div h3 {
+        font-size: 1rem;
+        text-align: center;
+        margin:.5rem auto;
+    }
+    .overview-the-maid div p {
+        font-size: .9rem;
+        font-weight: 100;
+        text-align: center;
         margin:0 auto;
-
     }
-    #about .box p {
-        width: 100%;
-        height: auto;
-        margin:0rem;
+    /* project1 */
+    #project .box {
+        width: 90%;
+        height:auto;
+        margin: 0 auto;
+        display: block;
+    }
+    #project .box h1 {
+        font-size: 6rem;
+        line-height:6rem;
+    }
+
+    #process .box, #draftImage .box {
+        width:90%;
+        display: block;
+        height:auto;
+        margin-bottom:5rem;
+    }
+
+    #process .box h1, #draftImage .box h1{
+        display: block;
+        font-size:3rem;
+    }
+
+    #process .pos1, #draftImage .pos1{
+        width:90%;
+    }
+
+
+    .up a{
+        position:fixed;
+        padding:0 .8rem;
+        font-size:2rem;
+        bottom:.75rem;
+        right:1.75rem;
+        mix-blend-mode: difference;
+        border-radius:20%;
+        color:#fff;
+        opacity:.5;
+        mix-blend-mode: difference;
+        text-decoration: none;
+        transition: bottom .25s, right .25s, font-size .25s, opacity .25s;
+    }
+    
+    .up a:hover, .up a:active, .up a:focus{
+        bottom:.25rem;
+        right:1.25rem;
+        font-size:3rem;
+        opacity:1;
+        mix-blend-mode: difference;
     }
 }

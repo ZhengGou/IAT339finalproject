@@ -18,7 +18,7 @@
 
 </head>
 
-<body>
+<body id="homeHtml">
 
     <header class="header" id="topOfThePage">
         <div id="logo" data-aos="fade-right">
@@ -30,69 +30,28 @@
             <div id="menu" onclick="toggleNav()"></div>
         </div>
         <div id="side_nav">
-        <nav id="top_nav">
-            <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
-            <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
-            <a href="p_about.html" class="hover-this"><span>About</span></a>
-        </nav>
+            <nav class="top_nav">
+                <a href="p_project1.html"><span>The maid</span></a>
+                <a href="p_project2.html"><span>Undersea</span></a>
+                <a href="p_about.html"><span>About</span></a>
+            </nav>
         </div>
-        <!-- <div class="cursor"></div> -->
+
+        <div class="nav-wrapper">
+            <nav>
+                <a href="p_project1.html" class="hover-this"  data-aos="fade-up"><span>The maid</span></a>
+                <a href="p_project2.html" class="hover-this"  data-aos="fade-up"><span>Undersea</span></a>
+                <a href="p_about.html" class="hover-this"  data-aos="fade-up"><span>About</span></a>
+                <div class="cursor"></div>
+            </nav>
+        </div>
+       
+
     </header>
 
-    <main>
-        <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
-
-        <!-- <div class="bghome">
-            <div class="rotate">
-                <div class="sphere">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="sphere">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="sphere">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-                <div class="sphere">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-
-        </div> -->
-
-
-        <section class="bigTitle">
+    <main id="homepage">
+        
+        <section>
 
             <div class="titleText" data-aos="fade-up">
                 <h1 data-aos="fade-up">Wenyue He</h1>
@@ -119,6 +78,19 @@
             </div>
         </section>
     </footer>
+
+    <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
 
 
     <script src="js/nav.js"></script>

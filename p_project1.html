@@ -9,7 +9,7 @@
     <link rel="icon" type="image/icon" href="img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
     <title>The maid</title>
 
     <link href="css/p_main.css" rel="stylesheet">
@@ -19,7 +19,7 @@
 <body>
 
     <header class="header" id="topOfThePage">
-        <div id="logo" class="animated slideInLeft">
+        <div id="logo" data-aos="fade-right">
             <a href="p_home.html"> <img src="img/wlogo.png" alt="" width="100" /></a>
         </div>
 
@@ -28,113 +28,170 @@
             <div id="menu" onclick="toggleNav()"></div>
         </div>
         <div id="side_nav">
-            <nav id="top_nav">
-                <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
-                <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
-                <a href="p_about.html" class="hover-this"><span>About</span></a>
+            <nav class="top_nav">
+                <a href="p_project1.html"><span>The maid</span></a>
+                <a href="p_project2.html"><span>Undersea</span></a>
+                <a href="p_about.html"><span>About</span></a>
+            </nav>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav>
+                <a href="p_project1.html" class="hover-this"  data-aos="fade-up"><span>The maid</span></a>
+                <a href="p_project2.html" class="hover-this"  data-aos="fade-up"><span>Undersea</span></a>
+                <a href="p_about.html" class="hover-this"  data-aos="fade-up"><span>About</span></a>
+                <div class="cursor"></div>
             </nav>
         </div>
     </header>
 
-    <main>
-
-        <section class="bigTitle">
+    <main id="p1 up">
+        <section class="titleBG">
+            <div id="the-maid-bg"></div>
+            <div id="haze-filter"></div>
+        </section>
+        <section>
             <div class="titleText">
-                <h1 class="animated slideInUp">UI/UX</h1>
-                <h2 class="animated slideInUp">Design</h2>
-                <p class="animated slideInUp">Interaction web Design: The maid</p>
+                <h1>UI/UX</h1>
+                <h2>Design</h2>
+                <p>Interaction web Design: The maid</p>
             </div>
         </section>
+        <section class="overview-the-maid">
+            <div>
+                <h3>Role</h3>
+                <p>UI/UX Design</p>
+            </div>
+            <div>
+                <h3>Date</h3>
+                <p>Spring 2019</p>
+            </div>
+            <div>
+                <h3>Overview</h3>
+                <p>Interaction web, game design</p>
+            </div>
+            <div id="view-website">
+                <a href="">→ view website</a>
+            </div>
+        </section>
+
         <section id="project">
             <!--Introduction-->
             <div class="subtitle">
-                <h1 class="upright">Introduction</h1>
+                <div class="longdash"></div>
+                <h1 class="sections">01</h1>
             </div>
             <div class="box">
-                <img class="image animated slideInLeft" src="img/313homepage.jpg" alt="313 home page design" width="600"
-                    onContextMenu="return false;">
-                <p class="animated slideInUp">Spring 2019 - As a team of four in this Interaction web Design course, we are presenting our final
+                <h1>The Maid</h1>
+                <p>As a team of four in this Interaction web Design course, we are presenting our final
                     term
                     project named "The maid".
                     The maid is a interaction web base text explore game which the targeted audiences are both males and
                     females aged between 15 to 45, who are interesting with spend some time on text-image game. The main
                     idea
                     of the website is to allow user to have immersion experience by interaction with the image.
-
-                    <br>
-                    <br>
-                    My role: visual designer, interaction designer. I create the flow chart of interaction.
                 </p>
             </div>
-            <div class="empty"></div>
         </section>
 
         <section id="process">
             <!--Process-->
             <div class="subtitle">
-                <h1 class="upright">Process</h1>
+                <div class="longdash"></div>
+                <h1 class="sections">02</h1>
             </div>
             <div class="box">
-                <div class="pos2">
-                    <h3>Create setting</h3>
-                </div>
-                <div class="posSpacing">
+                <h1>Process</h1>
+                <div class="dashed"></div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia
+                    deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="pos1">
+                <div>
+                    <h3>Moodboard</h3>
+                    <div class="dashed"></div>
                     <div class="flexing">
-                        <img src="img/roomset.jpg" alt="roomset" width="400" height="400" onContextMenu="return false;">
+                        <img src="img/moodboard.png" alt="moodboard" onContextMenu="return false;">
                         <p>In the beginning, the professor asked us to think about the character set. We found that we
                             were very interested in this role-playing case. Through discussion, we decided to make this
-                            text-based web page. First of all, we have drawn a room diagram to make it easier for us to
+                            text-based web page. First of all, we have created a moodboard to make it easier for us to
                             combine the script with this idea.</p>
-                        <img src="img/moodboard.png" alt="moodboard" height="400" onContextMenu="return false;">
-                        <p>We also created a moodboard on the printerest to let the professor understand the feeling of
-                            making our web page.</p>
                     </div>
                 </div>
-
-                <div class="pos2">
-                    <h3>Process</h3>
-                </div>
-                <div class="posSpacing">
+                <div>
+                    <h3>Room Design</h3>
+                    <div class="dashed"></div>
                     <div class="flexing">
-                        <img src="img/313process.png" alt="flowchat1" height="400" onContextMenu="return false;">
+                        <img src="img/roomset.jpg" alt="roomset" onContextMenu="return false;">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                            labore
+                            et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            nisi
+                            ut
+                            aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                            esse
+                            cillum
+                            dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                            culpa
+                            qui officia
+                            deserunt mollit anim id est laborum.</p>
+                    </div>
+                </div>
+                <div>
+                    <h3>Flowchart</h3>
+                    <div class="dashed"></div>
+                    <div class="flexing">
+                        <img src="img/313process.png" alt="flowchat1" onContextMenu="return false;">
+                        <!-- <img src="img/313process2.jpg" alt="flowchat2" onContextMenu="return false;"> -->
                         <p>I made a flow chart based on the script, and I used the way of illustration to illustrate the
                             logic of our web page exploring interaction. Because we decided to make this web game on
                             wix, I found the corresponding icon to display the items that can be clicked. I think the
                             visual expression helps my team members to make and improve the story line more
-                            stereoscopically.</p>
-                        <img src="img/313process2.jpg" alt="flowchat2" width="400" height="400"
-                            onContextMenu="return false;">
-                        <p>We also created a flowchart of the storyboard version to get a more intuitive understanding
+                            stereoscopically. We also created a flowchart of the storyboard version to get a more
+                            intuitive
+                            understanding
                             of how the story interacts.</p>
                     </div>
                 </div>
-
-                <div class="pos2">
-                    <h3>Draft image</h3>
-                </div>
-                <div class="posSpacing">
-                    <div class="flexing">
-                        <img src="img/draft img.jpg" alt="draft" height="400" onContextMenu="return false;">
-
-                        <p>I made a flow chart based on the script, and I used the way of illustration to illustrate the
-                            logic of our web page exploring interaction. Because we decided to make this web game on
-                            wix, I found the corresponding icon to display the items that can be clicked. I think the
-                            visual expression helps my team members to make and improve the story line more
-                            stereoscopically..</p>
-                    </div>
-                </div>
-
-                <div class="pos2">
-                    <h3>Final work</h3>
-                </div>
-                <div class="posSpacing">
-                    <div class="flexing">
-                        <img src="img/313homepage.jpg" alt="draft" height="400" onContextMenu="return false;">
-                        <p>Based on our final version, I think we have created a successful web interactive game that
-                            gives viewers an immersive experience.</p>
-                    </div>
-                </div>
+            </div>
         </section>
+
+        <section id="draftImage">
+            <!--Outcome-->
+            <div class="subtitle">
+                <div class="longdash"></div>
+                <h1 class="sections">03</h1>
+            </div>
+            <div class="box">
+                <h1>Outcome</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                    labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+                    ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum
+                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                    qui officia
+                    deserunt mollit anim id est laborum.</p>
+            </div>
+
+            <div class="pos1">
+                <h3>Final Thought</h3>
+                <p>"Based on our final version, I think we have created a successful web interactive game that
+                    gives viewers an immersive experience."</p>
+            </div>
+        </section>
+        <div class="up">
+            <a href="#topOfThePage" title="Top of the page"><i class="fas fa-angle-up"></i></a>
+        </div>
 
     </main>
 
@@ -155,7 +212,11 @@
     </footer>
 
 
-
+    <script src="js/nav.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 </body>
