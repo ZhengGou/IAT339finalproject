@@ -261,9 +261,9 @@ footer h5 {
 /* home bg */
 
 .bubbles {
-    position: absolute;
+    position: fixed;
     width: 100%;
-    height: 100%;
+    height: 125%;
     z-index: 0;
     overflow: hidden;
     top: 0;
@@ -524,15 +524,15 @@ footer h5 {
     background-size: cover;
     background-position: center bottom;
     -webkit-background-clip: text;
-    background-clip: text;
-    color: rgba(0, 0, 0, 0);
+    background-clip: text; /*Reference:https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip */
+    color: transparent;
 }
 #project .box .p02_h1 {
     background-image: url("../img/233bg.jpg");
     background-size: cover;
     background-position: center bottom;
     -webkit-background-clip: text;
-    background-clip: text;
+    background-clip: text; /*Reference:https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip */
     color: rgba(0, 0, 0, 0);
 }
 
@@ -547,8 +547,7 @@ footer h5 {
 
 #process {
     width: 100%;
-    min-height: 100vh;
-    max-height: auto;
+    height:auto;
     padding: 2rem 0;
     background-color: #111;
     position: relative;
@@ -570,7 +569,7 @@ footer h5 {
     display: flex;
 }
 
-#process .box h1, #draftImage .box h1 {
+#process .box h2, #draftImage .box h2 {
     font-size: 5rem;
     font-weight: bold;
     text-align: left;
@@ -673,27 +672,6 @@ footer h5 {
     padding-top: 3rem;
 }
 
-#draftImage .pos1 {
-    width: 68%;
-    margin: 0 auto;
-    color: #111;
-}
-
-#draftImage .pos1 h3 {
-    font-size: 1.75rem;
-    margin: 1rem;
-    text-align: left;
-    color:#666;
-}
-
-#draftImage .pos1 p {
-    font-size: 1.5rem;
-    font-weight: 100;
-    margin: 2rem;
-    text-align: justify;
-    color: #111;
-}
-
 
 /* project 2 */
 #the-cube-bg {
@@ -749,7 +727,8 @@ footer h5 {
     padding: 0;
 }
 
-.myimg div:nth-child(1) {
+.myimg div{
+    display: block;
     position: relative;
     background-image: url("../img/me.png");
     background-position: center;
@@ -760,34 +739,6 @@ footer h5 {
     height: 12rem;
     margin: 2rem auto;
     text-align: center;
-}
-
-.myimg div:nth-child(2) {
-    position: absolute;
-    background-image: url("../img/c1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-    width: 8rem;
-    height: 8rem;
-    margin: 7rem auto 0 auto;
-    top: -100px;
-    left: 0px;
-}
-
-.myimg div:nth-child(3) {
-    position: absolute;
-    background-image: url("../img/c2.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 2;
-    width: 6rem;
-    height: 6rem;
-    margin: 7rem auto 0 auto;
-    top: 30px;
-    left: 200px;
 }
 
 .up a{
@@ -882,7 +833,63 @@ footer h5 {
     main {
         width: 100%;
     }
+    
+
     /*About section*/
+
+#about {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0;
+}
+
+#about h1{
+    width:90%;
+    margin:0 auto;
+    padding-top: 12rem;
+    font-size:40pt;
+}
+
+#about .box{
+    width:90%;
+    display:block;
+    margin: 3rem auto;
+}
+
+#about .myimg {
+    width:100%;
+    height:auto;
+    display:block;
+}
+
+#about .box p {
+    width:100%;
+    height:auto;
+    display:block;
+    padding: 1rem;
+    line-height: 2rem;
+}
+
+.myimg {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.myimg div{
+    position: relative;
+    background-image: url("../img/me.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 2;
+    width: 12rem;
+    height: 12rem;
+    margin: 2rem auto;
+    text-align: center;
+}
     
 
 
@@ -959,7 +966,7 @@ footer h5 {
         margin-bottom:10rem;
     }
 
-    #process .box h1, #draftImage .box h1{
+    #process .box h2, #draftImage .box h2{
         display: block;
         font-size:3rem;
     }
@@ -971,12 +978,6 @@ footer h5 {
 
     #process .pos1 div .dashed{
         top: 2.05rem;
-    }
-
-    #draftImage .pos1 h3 {
-        font-size: 1.5rem;
-        margin: 1rem;
-        text-align: left;
     }
 
     #draftImage{
@@ -1090,12 +1091,12 @@ footer h5 {
         margin-bottom:5rem;
     }
 
-    #process .box h1, #draftImage .box h1{
+    #process .box h2, #draftImage .box h2{
         display: block;
         font-size:3rem;
     }
 
-    #process .pos1, #draftImage .pos1{
+    #process .pos1{
         width:90%;
     }
 
