@@ -9,6 +9,7 @@
     <link rel="icon" type="image/icon" href="img/logo.png" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/aos.css" />
     <title>About</title>
 
     <link href="css/p_main.css" rel="stylesheet">
@@ -18,51 +19,51 @@
 <body>
 
     <header class="header" id="topOfThePage">
-        <div id="logo">
+        <div id="logo" data-aos="fade-right" data-aos-duration="500">
             <a href="p_home.html"> <img src="img/wlogo.png" alt="" width="100" /></a>
         </div>
 
         <!-- animation nav icon -->
-        <div class="container">
+        <div class="container" data-aos="fade-left" data-aos-delay="250" data-aos-duration="1000">
             <div id="menu" onclick="toggleNav()"></div>
         </div>
         <div id="side_nav">
-            <nav id="top_nav">
-                <a href="p_project1.html" class="hover-this"><span>The maid</span></a>
-                <a href="p_project2.html" class="hover-this"><span>Undersea</span></a>
-                <a href="p_about.html" class="hover-this"><span>About</span></a>
+            <nav class="top_nav">
+                <a href="p_project1.html"><span>The maid</span></a>
+                <a href="p_project2.html"><span>Clock</span></a>
+                <a href="p_about.html"><span>About</span></a>
+            </nav>
+        </div>
+
+        <div class="nav-wrapper">
+            <nav>
+                <a href="p_project1.html" class="hover-this" data-aos="fade-up" data-aos-delay="250"
+                    data-aos-duration="1000"><span>The maid</span></a>
+                <a href="p_project2.html" class="hover-this" data-aos="fade-up" data-aos-delay="500"
+                    data-aos-duration="1000"><span>Clock</span></a>
+                <a href="p_about.html" class="hover-this" data-aos="fade-up" data-aos-delay="750"
+                    data-aos-duration="1000"><span>About</span></a>
+                <div class="cursor"></div>
             </nav>
         </div>
     </header>
 
     <main>
-        <div class="bubbles">
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-            <div class="bubble"></div>
-        </div>
-
         <section id="about">
             <!--About-->
-            
-            <div class="myimg">
-                <div></div>
-                <!--my image -->
-                <div></div>
-                <!--c1 -->
-                <div></div>
-                <!--c2 -->
-            </div>
-            <div class="box">
-
-                <p>I borned in Guangzhou, China. I'm major in interactive arts & tech at Simon Fraser University.
+            <h1 data-aos="fade" data-aos-delay="250" data-aos-duration="2000">About Me</h1>
+            <div class="box"> 
+                <div class="myimg">
+                    <div data-aos="fade" data-aos-delay="500" data-aos-duration="2000"></div>
+                    <!--my image -->
+                    <div data-aos="fade-up" data-aos-delay="750" data-aos-duration="2000"></div>
+                    <!--c1 -->
+                    <div data-aos="fade-up" data-aos-delay="1000" data-aos-duration="2000"></div>
+                    <!--c2 -->
+                </div>
+                <p data-aos-delay="500" data-aos="fade-left" data-aos-anchor-placement="center-bottom"
+                    data-aos-duration="1000">I borned in Guangzhou, China. I'm major in interactive arts & tech at Simon
+                    Fraser University.
                     I‘m a junior designer and creator. I
                     am interesting in UX/UI design and programming which are able
                     to create and design games, websites and phone applications.
@@ -71,15 +72,14 @@
                     Also,
                     I work as a freelance professional photographer who specialized in product and portrait
                     photography in my free time. Within these years of experiences, I learned to be more productive,
-                    creative, and adaptable in academic and working environments.</p>
+                    creative, and adaptable in academic and working environments.
+                </p>
             </div>
-            <div class="empty"></div>
         </section>
-
-
     </main>
-    <footer>
-        <section id="connect">
+
+    <footer data-aos="fade" data-aos-anchor-placement="center-bottom" data-aos-duration="2000">
+        <section>
 
             <a href="https://www.facebook.com/profile.php?id=100010960484225"><i class="fab fa-facebook"></i></a>
             <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
@@ -93,6 +93,25 @@
             </div>
         </section>
     </footer>
+
+    <div class="bubbles" data-aos="fade" data-aos-duration="2000">
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+    </div>
+
+    <script src="js/nav.js"></script>
+    <script src="js/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 

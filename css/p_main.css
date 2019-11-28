@@ -149,6 +149,7 @@ footer {
     text-align: center;
     padding-top: 2rem;
     line-height: 2em;
+    padding-bottom: 1rem;
 }
 
 .footer-nav a {
@@ -665,10 +666,10 @@ footer h5 {
 
 
 /* project 2 */
-#the-fish-bg {
+#the-cube-bg {
     width: 100%;
     height: 100vh;
-    background-image: url("../img/gameEnvironment.jpg");
+    background-image: url("../img/233bg.jpg");
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -680,26 +681,41 @@ footer h5 {
 
 #about {
     width: 100%;
-    margin: 0;
+    height: 100vh;
+    margin: 0 auto;
+    text-align: left;
     padding: 0;
-    color: #efe8d8;
-    display: flex;
+    background-color: #111;
 }
 
-#about .subtitle {
+#about h1{
+    width:68%;
+    margin:0 auto;
+    padding-top: 15rem;
+    font-size:5rem;
+    color:#fff;
+}
+
+#about .box{
+    width:68%;
+    display:flex;
+    margin: 2rem auto;
+}
+
+#about .myimg {
     flex: 1;
 }
 
-#about .box {
+#about .box p {
     flex: 2;
-    padding: 10rem 2rem 10rem 4rem;
-    display: block;
+    padding: 1rem;
     text-align: justify;
+    line-height: 1.5rem;
 }
 
 .myimg {
     position: relative;
-    margin: 10rem 2rem;
+    margin: 0;
     padding: 0;
 }
 
@@ -712,7 +728,7 @@ footer h5 {
     z-index: 2;
     width: 12rem;
     height: 12rem;
-    margin: 7rem auto 0 auto;
+    margin: 2rem auto;
     text-align: center;
 }
 
@@ -722,12 +738,12 @@ footer h5 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1;
+    z-index: 2;
     width: 8rem;
     height: 8rem;
     margin: 7rem auto 0 auto;
-    top: -20px;
-    left: -50px;
+    top: -100px;
+    left: 0px;
 }
 
 .myimg div:nth-child(3) {
@@ -736,23 +752,12 @@ footer h5 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    z-index: 1;
+    z-index: 2;
     width: 6rem;
     height: 6rem;
     margin: 7rem auto 0 auto;
-    top: 120px;
-    left: 120px;
-}
-
-#about .empty {
-    flex: 1;
-}
-
-#about .box p {
-    padding: 2rem;
-    margin: 3.5rem auto;
-    text-align: justify;
-    line-height: 1.55rem;
+    top: 30px;
+    left: 200px;
 }
 
 .up a{
@@ -848,35 +853,12 @@ footer h5 {
         width: 100%;
     }
     /*About section*/
-    #about {
-        width: 100%;
-        margin: 0;
-        padding: 0;
-        color: #efe8d8;
-        display: block;
-    }
-    #about .subtitle {
-        display: none;
-    }
-    #about .box {
-        width: 100%;
-        padding: 0 0rem;
-        margin: 0 auto;
-    }
-    #about .box p {
-        width: 100%;
-        height: auto;
-        margin: 0rem;
-    }
-    #about .myimg {
-        margin-bottom: 0;
-    }
-    .myimg div:nth-child(2), .myimg div:nth-child(3) {
-        display: none;
-    }
-    #about .empty {
-        display: none;
-    }
+    
+
+
+
+
+
     /* project1 */
     /* main - The Maid */
     .titleBG {
