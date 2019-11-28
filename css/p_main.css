@@ -511,17 +511,28 @@ footer h5 {
     display: flex;
 }
 
-#project .box h1 {
+#project .box h1{
     font-size: 10rem;
     font-weight: bolder;
     text-align: left;
     flex: 1;
+    line-height: 10rem;
+}
+
+#project .box .p01_h1 {
     background-image: url("../img/themaid.jpg");
     background-size: cover;
     background-position: center bottom;
     -webkit-background-clip: text;
     background-clip: text;
-    line-height: 10rem;
+    color: rgba(0, 0, 0, 0);
+}
+#project .box .p02_h1 {
+    background-image: url("../img/233bg.jpg");
+    background-size: cover;
+    background-position: center bottom;
+    -webkit-background-clip: text;
+    background-clip: text;
     color: rgba(0, 0, 0, 0);
 }
 
@@ -529,7 +540,7 @@ footer h5 {
     font-size: 1rem;
     text-align: justify;
     flex: 1;
-    line-height: 1.5rem;
+    line-height: 2rem;
     color: #111;
     padding-top: 5rem;
 }
@@ -574,7 +585,7 @@ footer h5 {
     font-size: 1rem;
     text-align: justify;
     flex: 1;
-    line-height: 1.5rem;
+    line-height: 2rem;
     color: white;
     padding-top: 3rem;
 }
@@ -624,6 +635,25 @@ footer h5 {
     margin: auto 0;
     padding: 0;
     text-align: justify;
+    line-height: 2rem;
+}
+
+.block{
+    display:block;
+}
+
+.block img{
+    width:100%;
+    height:auto;
+    margin:0 auto;
+    padding:0 .2rem 1.5rem .2rem;
+}
+
+.block p {
+    margin: auto 0;
+    padding: 0;
+    text-align: justify;
+    line-height: 2rem;
 }
 
 #draftImage {
@@ -638,7 +668,7 @@ footer h5 {
     font-size: 1rem;
     text-align: justify;
     flex: 1;
-    line-height: 1.5rem;
+    line-height: 2rem;
     color: #111;
     padding-top: 3rem;
 }
@@ -710,7 +740,7 @@ footer h5 {
     flex: 2;
     padding: 1rem;
     text-align: justify;
-    line-height: 1.5rem;
+    line-height: 2rem;
 }
 
 .myimg {
@@ -908,16 +938,18 @@ footer h5 {
         display: block;
     }
     #project .box h1 {
-        font-size: 8rem;
+        width:100%;
+        font-size: 7.5rem;
         line-height:8rem;
         text-align: center;
         padding-top: 3rem;
         display: block;
+        margin: 0 auto;
+        font-weight: bolder;
     }
     #project .box p {
         display: block;
         font-size: 1rem;
-        line-height: 1.5rem;
         padding-top: 5rem;
     }
 
@@ -955,18 +987,19 @@ footer h5 {
         display: block;
     }
 
-    .flexing {
+    .flexing, .block{
         display: block;
     }
-    .flexing img {
+    .flexing img, .block img{
         width: 100%;
         height:auto;
         padding: 0 .2rem;
     }
-    .flexing p {
+    .flexing p, .block p{
         width:100%;
         margin: 0 auto;
         padding: 2rem .2rem;
+        line-height: 2rem;
     }
 }
 
@@ -994,12 +1027,17 @@ footer h5 {
     }
 
     .titleText {
-        padding-top: 15rem;
+        padding-top: 12rem;
         margin: 0 auto;
     }
     *{
         overflow-x: hidden;
     }
+
+    .titleText{
+        padding-top: 12rem;
+    }
+
     .titleText h1{
         font-size: 40pt;
     }
@@ -1040,8 +1078,9 @@ footer h5 {
         display: block;
     }
     #project .box h1 {
-        font-size: 6rem;
-        line-height:6rem;
+        width:100%;
+        /* font-size: 40pt;
+        line-height:5rem; */
     }
 
     #process .box, #draftImage .box {
